@@ -25,9 +25,9 @@ model_name = 'Cellsplitdetectoroptimizedxenopus.h5'
 
 
 #Neural network parameters
-division_categories_json = model_dir + 'Celleventcategories.json'
+division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json '
 key_categories = load_json(division_categories_json)
-division_cord_json = model_dir + 'Celleventcord.json'
+division_cord_json = model_dir + 'Cellsplitcordxenopus.json'
 key_cord = load_json(division_cord_json)
 
 #For ORNET use residual = True and for OSNET use residual = False
