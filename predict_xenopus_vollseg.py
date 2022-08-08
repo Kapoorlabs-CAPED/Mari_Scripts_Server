@@ -8,18 +8,18 @@ from vollseg import StarDist3D, UNET, VollSeg, MASKUNET, CARE
 from pathlib import Path
 
 
-image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/test/raw/third_dataset_split/'
+image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/test/raw/third_dataset_split/seg/'
+save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/seg/'
  
-unet_model_name = 'Unet3D/Unet_Nuclei_Xenopus/'
+unet_model_name = 'Unet3D/unet_Nuclei_Xenopus_Mari/'
 star_model_name = 'StarDist3D/Nuclei_Xenopus_Mari/'
 roi_model_name = 'MASKUNET/Roi_Nuclei_Xenopus/'
 
 
 unet_model = UNET(config = None, name = unet_model_name, basedir = model_dir)
 star_model = StarDist3D(config = None, name = star_model_name, basedir = model_dir)
-roi_model = MASKUNET(config = None, name = roi_model_name, basedir = model_dir)
+roi_model =  MASKUNET(config = None, name = roi_model_name, basedir = model_dir)
 
 
 
@@ -34,7 +34,7 @@ min_size_mask=10
 max_size = 1000000
 #Adjust the number of tiles depending on how good your GPU is, tiling ensures that your image tiles fit into the runtime
 #memory 
-n_tiles = (2,8,8)
+n_tiles = (1,1,1)
 #If your Unet model is weak we will use the denoising model to obtain the semantic segmentation map, set this to False if this
 #is the case else set tit o TRUE if you are using Unet to obtain the semantic segmentation map.
 dounet = True
@@ -71,4 +71,6 @@ for fname in filesRaw:
              UseProbability = UseProbability, 
              save_dir = save_dir, 
              Name = Name, 
+             prob_thresh = 0.67,
+             nms_thresh = 0.3,
              dounet = dounet)    

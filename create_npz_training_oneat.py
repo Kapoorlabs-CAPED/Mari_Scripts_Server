@@ -30,7 +30,7 @@ seg_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/o
 #Specify the model directory where we store the json of categories, training model and parameters
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
 #Directory for storing center ONEAT training data 
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m2p2/'
+save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
 Path(model_dir).mkdir(exist_ok = True)
 Path(save_dir).mkdir(exist_ok = True)
 
@@ -51,14 +51,14 @@ yolo_v0 = False
 yolo_v1 = True
 #with angle term
 yolo_v2 = False
-size_tminus = 2
-size_tplus = 2
+size_tminus = 1
+size_tplus = 1
 tshift = 0
 trainshapex = 64
 trainshapey = 64
 normalizeimage = True
-npz_name = 'Xenopus_oneat_training_m2p2'
-npz_val_name = 'Xenopus_oneat_training_m2p2val'
+npz_name = 'Xenopus_oneat_training_m1p1'
+npz_val_name = 'Xenopus_oneat_training_m1p1val'
 crop_size = [trainshapex,trainshapey,size_tminus,size_tplus]
 
 
