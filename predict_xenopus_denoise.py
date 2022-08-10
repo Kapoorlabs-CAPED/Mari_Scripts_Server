@@ -8,9 +8,9 @@ from vollseg import CARE, VollSeg
 from pathlib import Path
 
 
-image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/third_dataset_split/'
+image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset_split/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/third_dataset_split/den/'
+save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset_split/den/'
  
 noise_model_name = 'CARE/Denoising_Nuclei_Xenopus/'
 noise_model = CARE(config = None, name = noise_model_name, basedir = model_dir)

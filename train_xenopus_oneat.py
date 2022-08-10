@@ -20,7 +20,7 @@ npz_val_name = 'Xenopus_oneat_training_m2p2val.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectortmtp22d47f32l32.h5'
+model_name = 'Cellsplitdetectortmtp22d38f32l32.h5'
 
 
 
@@ -39,7 +39,7 @@ start_kernel = 7
 lstm_kernel = 3
 mid_kernel = 3
 #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
-depth = 47
+depth = 38
 #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
 learning_rate = 1.0E-3
 #For stochastic gradient decent, the batch size used for computing the gradients
