@@ -16,16 +16,16 @@ event_confidence = 0.9
 iou_threshold = 0.1
 downsamplefactor = 1
 #For a Z of 0 to 22 this setup takes the slices from 11 - 4 = 7 to 11 + 1 = 12
-start_project_mid = 8
-end_project_mid = 4
+start_project_mid = 4
+end_project_mid = 1
 normalize = True
 nms_function = 'iou'
 
-imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw_denoised/gt/'
+imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/oneat_retrain_results/d38f32l32_denoised/'
-model_name = 'Cellsplitdetectortmtp22d38f32l32'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/test_d29f32l32/'
+model_name = 'Cellsplitdetectortmtp22d29f32l32'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'

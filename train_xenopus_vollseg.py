@@ -20,7 +20,7 @@ from tifffile import imread, imwrite
 base_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
 npz_filename = 'XenopusNucleiSeg'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data/Models/Unet3D/'
-model_name = 'Nuclei_Xenopus_Mari'
+model_name = 'nuclei_xenopus_mari_d4f32'
 
 raw_dir = 'raw/'
 real_mask_dir = 'real_mask/' 
@@ -35,7 +35,7 @@ binary_mask_dir = 'binary_mask/'
 
 
 #Network training parameters
-depth = 2
+depth = 4
 epochs = 200
 learning_rate = 0.0003
 batch_size = 2
@@ -47,14 +47,14 @@ n_patches_per_image = 32
 n_rays = 96
 startfilter = 32
 use_gpu_opencl = False
-generate_npz = True
+generate_npz = False
 backbone = 'unet'
 load_data_sequence = False
 validation_split = 0.01
 n_channel_in = 1
 train_unet = True
 train_star = False
-
+train_loss = 'mae'
 
 
 
@@ -75,6 +75,7 @@ SmartSeeds3D(base_dir = base_dir,
              patch_y= patch_y, 
              patch_z = patch_z,
              erosion_iterations = 0,  
+             train_loss = train_loss,
              train_star = train_star,
              train_unet = train_unet,
              use_gpu = use_gpu_opencl,  
