@@ -40,8 +40,8 @@ csv_name_diff = 'ONEAT'
 count = 0
 rotation_angles = [30,60, 90, 120, 150, 180]
 
-mean = 0
-sigma = 5
+mean = 0.0
+sigma = 5.0
 distribution = 'Both'
 
 
