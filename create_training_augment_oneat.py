@@ -38,7 +38,7 @@ event_type_name = ["Normal", "Division"]
 event_type_label = [0, 1]
 csv_name_diff = 'ONEAT'
 count = 0
-rotation_angles = [30,60, 90, 120, 150, 180]
+rotation_angles = [3,6, 9, 12, 15, 18]
 
 mean = 0.0
 sigma = 5.0
