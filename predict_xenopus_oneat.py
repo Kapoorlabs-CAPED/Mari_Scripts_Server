@@ -13,7 +13,6 @@ from pathlib import Path
 n_tiles = (1,2,2)
 event_threshold = 0.9
 event_confidence = 0.9
-iou_threshold = 0.1
 downsamplefactor = 1
 #For a Z of 0 to 22 this setup takes the slices from 11 - 4 = 7 to 11 + 1 = 12
 start_project_mid = 4
@@ -21,11 +20,11 @@ end_project_mid = 1
 normalize = True
 nms_function = 'iou'
 
-imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
+imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/test_d29f32l32/'
-model_name = 'Cellsplitdetectortmtp22d29f32l32'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/second_dataset/'
+model_name = 'Cellsplitdetectorxenopus'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'
@@ -51,7 +50,6 @@ for imagename in X:
                            n_tiles = n_tiles, 
                            event_threshold = event_threshold, 
                            event_confidence = event_confidence,
-                           iou_threshold = iou_threshold,
                            marker_tree = marker_tree, 
                            remove_markers = remove_markers,
                            nms_function = nms_function,

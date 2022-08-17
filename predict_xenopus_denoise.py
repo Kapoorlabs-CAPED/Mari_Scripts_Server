@@ -12,7 +12,7 @@ image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset_spli
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
 save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset_split/den/'
  
-noise_model_name = 'CARE/Denoising_Nuclei_Xenopus/'
+noise_model_name = 'CARE/denoising_nuclei_xenopus/'
 noise_model = CARE(config = None, name = noise_model_name, basedir = model_dir)
 
 
@@ -27,7 +27,7 @@ min_size_mask=10
 max_size = 1000000
 #Adjust the number of tiles depending on how good your GPU is, tiling ensures that your image tiles fit into the runtime
 #memory 
-n_tiles = (4,8,8)
+n_tiles = (4,4,4)
 axes = 'ZYX'
 
 for fname in filesRaw:

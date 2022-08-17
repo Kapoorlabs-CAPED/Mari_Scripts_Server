@@ -8,13 +8,13 @@ from vollseg import StarDist3D, UNET, VollSeg, MASKUNET, CARE
 from pathlib import Path
 
 
-image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
+image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/dataset/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/seg/'
+save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/dataset/seg/'
  
-unet_model_name = 'Unet3D/unet_Nuclei_Xenopus_Mari/'
-star_model_name = 'StarDist3D/Nuclei_Xenopus_Mari/'
-roi_model_name = 'MASKUNET/Roi_Nuclei_Xenopus/'
+unet_model_name = 'Unet3D/unet_nuclei_xenopus_mari/'
+star_model_name = 'StarDist3D/nuclei_xenopus_mari/'
+roi_model_name = 'MASKUNET/roi_nuclei_xenopus/'
 
 
 unet_model = UNET(config = None, name = unet_model_name, basedir = model_dir)
@@ -29,7 +29,7 @@ filesRaw.sort
 #Minimum size in pixels for the cells to be segmented
 min_size = 1
 #Minimum size in pixels for the mask region, regions below this threshold would be removed
-min_size_mask=10
+min_size_mask=1
 #maximum size of the region, set this to veto regions above a certain size
 max_size = 1000000
 #Adjust the number of tiles depending on how good your GPU is, tiling ensures that your image tiles fit into the runtime
@@ -45,8 +45,6 @@ slice_merge = False
 #Use probability map for stardist to perform watershedding or use distance map
 UseProbability = True
 donormalize=True
-lower_perc= 1
-upper_perc=99.8
 axes = 'ZYX'
 ExpandLabels = False
 for fname in filesRaw:
@@ -63,14 +61,10 @@ for fname in filesRaw:
              min_size_mask = min_size_mask,
              max_size = max_size,
              donormalize=donormalize,
-             lower_perc= lower_perc,
-             upper_perc=upper_perc,
              n_tiles = n_tiles,
              ExpandLabels = ExpandLabels,
              slice_merge = slice_merge, 
              UseProbability = UseProbability, 
              save_dir = save_dir, 
-             Name = Name, 
-             prob_thresh = 0.67,
-             nms_thresh = 0.3,
+             Name = Name,
              dounet = dounet)    

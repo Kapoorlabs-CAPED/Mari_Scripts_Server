@@ -14,13 +14,13 @@ from oneat.NEATUtils.helpers import save_json, load_json
 
 
 
-npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_noise/'
-npz_name = 'Xenopus_oneat_training_m1p1_noise.npz'
-npz_val_name = 'Xenopus_oneat_training_m1p1_noiseval.npz'
+npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
+npz_name = 'Xenopus_oneat_training_m1p1.npz'
+npz_val_name = 'Xenopus_oneat_training_m1p1val.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopus_noise.h5'
+model_name = 'Cellsplitdetectortmtp11d29f32l32.h5'
 
 
 
@@ -39,13 +39,13 @@ start_kernel = 7
 lstm_kernel = 3
 mid_kernel = 3
 #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
-depth = 47
+depth = 29
 #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
 learning_rate = 1.0E-3
 #For stochastic gradient decent, the batch size used for computing the gradients
-batch_size = 20
+batch_size = 25
 # use softmax for single event per box, sigmoid for multi event per box
-lstm_hidden_unit = 16
+lstm_hidden_unit = 32
 #Training epochs, longer the better with proper chosen learning rate
 epochs = 250
 nboxes = 1
