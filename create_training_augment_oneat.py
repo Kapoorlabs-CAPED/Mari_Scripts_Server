@@ -75,7 +75,7 @@ for fname in files_raw:
                         #Rotate
                         for rotate_angle in rotation_angles:
                                 
-                                rotate_pixels = TemporalAug(rotate_angle = np.radians(rotate_angle))
+                                rotate_pixels = TemporalAug(rotate_angle = rotate_angle)
 
                                 aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                                 
