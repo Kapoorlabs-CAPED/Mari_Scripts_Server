@@ -30,7 +30,7 @@ seg_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/o
 #Specify the model directory where we store the json of categories, training model and parameters
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
 #Directory for storing center ONEAT training data 
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_noise/'
+save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
 Path(model_dir).mkdir(exist_ok = True)
 Path(save_dir).mkdir(exist_ok = True)
 
@@ -88,9 +88,7 @@ MovieCreator.MovieLabelDataSet(image_dir,
                                tshift = tshift, 
                                yolo_v0 = yolo_v0, 
                                yolo_v1 = yolo_v1, 
-                               yolo_v2 = yolo_v2,
-                               add_noise = True,
-                               mu = 5  )
+                               yolo_v2 = yolo_v2 )
 
 
 
