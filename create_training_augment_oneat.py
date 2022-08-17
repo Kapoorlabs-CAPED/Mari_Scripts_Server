@@ -8,6 +8,7 @@ from oneat.NEATUtils import TemporalAug
 from oneat.NEATUtils.helpers import normalizeFloatZeroOne
 import os
 from tifffile import imread, imwrite
+import numpy as np
 
 #Specify the directory containing images
 image_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw/')
@@ -73,7 +74,8 @@ for fname in files_raw:
                         
                         #Rotate
                         for rotate_angle in rotation_angles:
-                                rotate_pixels = TemporalAug(rotate_angle = rotate_angle)
+                                
+                                rotate_pixels = TemporalAug(rotate_angle = np.radians(rotate_angle))
 
                                 aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                                 
