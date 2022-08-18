@@ -54,6 +54,12 @@ metrics_tracking:
        tf: 0.899
        bci: 0.425
 
+calibration:
+
+       gt_data: [0.69, 0.69, 199.54]
+       second_dataset : [0.69, 0.69, 199.54]
+       third_dataset: [0.6918883, 0.691883, 95.46]
+
 paths:
 
      training_data_seg: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
