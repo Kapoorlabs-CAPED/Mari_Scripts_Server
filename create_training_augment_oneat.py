@@ -80,9 +80,9 @@ for fname in files_raw:
                                 aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                                 
                                 Name = 'rotate_pixels' + str(count)
-                                imwrite(aug_image_dir + '/' + str(rotate_angle) + Name + '.tif', aug_rotate_pixels.astype('float32'))
-                                imwrite(aug_seg_image_dir + '/' + str(rotate_angle) +  Name + '.tif', aug_rotate_pixels_label.astype('uint16'))
-                                aug_rotate_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + str(rotate_angle) + Name +  '.csv', index = False, mode = 'w')
+                                imwrite(aug_image_dir + '/' + Csvname + str(rotate_angle) + Name + '.tif', aug_rotate_pixels.astype('float32'))
+                                imwrite(aug_seg_image_dir + '/' + Csvname + str(rotate_angle) +  Name + '.tif', aug_rotate_pixels_label.astype('uint16'))
+                                aug_rotate_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + str(rotate_angle) + Name +  '.csv', index = False, mode = 'w')
                                 count = count + 1
 
                         #Additive Noise
@@ -91,9 +91,9 @@ for fname in files_raw:
                         aug_addnoise_pixels,aug_addnoise_pixels_label, aug_addnoise_pixels_csv  = addnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                         
                         Name = 'addnoise_pixels' + str(count)
-                        imwrite(aug_image_dir + '/'  + Name + '.tif', aug_addnoise_pixels.astype('float32'))
-                        imwrite(aug_seg_image_dir + '/' +  Name + '.tif', aug_addnoise_pixels_label.astype('uint16'))
-                        aug_addnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Name +  '.csv', index = False, mode = 'w')
+                        imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_addnoise_pixels.astype('float32'))
+                        imwrite(aug_seg_image_dir + '/' + Csvname + Name + '.tif', aug_addnoise_pixels_label.astype('uint16'))
+                        aug_addnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                         count = count + 1
 
 
@@ -103,9 +103,9 @@ for fname in files_raw:
                         aug_mulnoise_pixels,aug_mulnoise_pixels_label, aug_mulnoise_pixels_csv  = mulnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                         
                         Name = 'mulnoise_pixels' + str(count)
-                        imwrite(aug_image_dir + '/'  + Name + '.tif', aug_mulnoise_pixels.astype('float32'))
-                        imwrite(aug_seg_image_dir + '/' +  Name + '.tif', aug_mulnoise_pixels_label.astype('uint16'))
-                        aug_mulnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Name +  '.csv', index = False, mode = 'w')
+                        imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_mulnoise_pixels.astype('float32'))
+                        imwrite(aug_seg_image_dir + '/' + Csvname +  Name + '.tif', aug_mulnoise_pixels_label.astype('uint16'))
+                        aug_mulnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                         count = count + 1
                         
                         #Brightness and Contrast
@@ -119,8 +119,8 @@ for fname in files_raw:
                             aug_cbnoise_pixels,aug_cbnoise_pixels_label, aug_cbnoise_pixels_csv  = cbnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
                             
                             Name = 'cblnoise_pixels' + str(count)
-                            imwrite(aug_image_dir + '/'  + Name + '.tif', aug_cbnoise_pixels.astype('float32'))
-                            imwrite(aug_seg_image_dir + '/' +  Name + '.tif', aug_cbnoise_pixels_label.astype('uint16'))
-                            aug_cbnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Name +  '.csv', index = False, mode = 'w')
+                            imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_cbnoise_pixels.astype('float32'))
+                            imwrite(aug_seg_image_dir + '/' + Csvname +  Name + '.tif', aug_cbnoise_pixels_label.astype('uint16'))
+                            aug_cbnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                             count = count + 1
 
