@@ -41,7 +41,7 @@ count = 0
 rotation_angles = [3,6,9]
 
 mean = 0.0
-sigma = 15.0
+sigma = 10.0
 distribution = 'Both'
 
 
