@@ -10,11 +10,13 @@ params_star:
     prob_threshold: 0.668
     nms_threshold: 0.3
 params_unet:
+
     depth: 2
     train_loss: 'mae'
     num_filters: 32 
     patch_size: [16, 128, 128]
 params_oneat:
+
     depth: 47
     stage_number: 3
     lstm_units: 16
@@ -26,6 +28,7 @@ params_oneat:
     nms_space: 10
     nms_time: 2
 params_trackmate:
+
     tracekr: 'SIMPLE LAP'
     space_units: 'um'
     time_units: 'sec'
@@ -33,10 +36,12 @@ params_trackmate:
     gap_closing_dist: 16
     gap_closing_frames: 3
 params_trackmate_oneat:
+
     veto : 0.99999
     tm_oneat_framegap: 3
 
 metrics_segmentation:
+
        iou: 0.3
        mse: 0.5
        ssim: 0.75
@@ -44,9 +49,11 @@ metrics_segmentation:
        tp: 2000
        fp: 50
 metrics_tracking:
+
        ct: 0.4674
        tf: 0.899
        bci: 0.425
+
 paths:
 
      training_data_seg: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
@@ -64,6 +71,7 @@ paths:
 
 
 files:
+
     star_model_name: 'nuclei_xenopus_mari'
     unet_model_name: 'unet_nuclei_xenopus_mari'
     roi_model_name: 'roi_nuclei_xenopus'
