@@ -1,0 +1,82 @@
+params_star:
+
+    depth: 2
+    rays: 96
+    annisotropy: [2.42,1,1]
+    grid: [1,2,2]
+    num_filters: 32
+    patch_size: [16, 128, 128]
+    backbone: 'unet'
+    prob_threshold: 0.668
+    nms_threshold: 0.3
+params_unet:
+    depth: 2
+    train_loss: 'mae'
+    num_filters: 32 
+    patch_size: [16, 128, 128]
+params_oneat:
+    depth: 47
+    stage_number: 3
+    lstm_units: 16
+    num_filters: 32
+    t_minus: 1
+    t_plus: 1
+    patch_size: [64,64]    
+    prob_threshold: 0.9999
+    nms_space: 10
+    nms_time: 2
+params_trackmate:
+    tracekr: 'SIMPLE LAP'
+    space_units: 'um'
+    time_units: 'sec'
+    search_dist: 14
+    gap_closing_dist: 16
+    gap_closing_frames: 3
+params_trackmate_oneat:
+    veto : 0.99999
+    tm_oneat_framegap: 3
+
+metrics_segmentation:
+       iou: 0.3
+       mse: 0.5
+       ssim: 0.75
+       f1: 0.96
+       tp: 2000
+       fp: 50
+metrics_tracking:
+       ct: 0.4674
+       tf: 0.899
+       bci: 0.425
+paths:
+
+     training_data_seg: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
+     training_data_oneat: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/'
+     models_star: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDIst3D/'
+     models_unet: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
+     models_roi:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/MASKUNET/'
+     models_oneat: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
+     models_denoising: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CARE/'
+     raw_datasets: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/'
+     denoised_raw_datasets: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw_denoised/'
+     seg_datasets: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
+     revolution_results_oneat: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/'
+     revolution_results_tracking: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/' 
+
+
+files:
+    star_model_name: 'nuclei_xenopus_mari'
+    unet_model_name: 'unet_nuclei_xenopus_mari'
+    roi_model_name: 'roi_nuclei_xenopus'
+    oneat_model_name: 'Cellsplitdetectorxenopus'
+
+
+
+     
+     
+                
+
+
+     
+
+
+
