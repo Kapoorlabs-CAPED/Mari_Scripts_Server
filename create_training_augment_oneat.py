@@ -77,7 +77,7 @@ for fname in files_raw:
                                 
                                 rotate_pixels = TemporalAug(rotate_angle = rotate_angle)
 
-                                aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
+                                aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                                 
                                 Name = 'rotate_pixels' + str(count)
                                 imwrite(aug_image_dir + '/' + Csvname + str(rotate_angle) + Name + '.tif', aug_rotate_pixels.astype('float32'))
@@ -95,7 +95,7 @@ for fname in files_raw:
                         #Additive Noise
                         addnoise_pixels = TemporalAug(mean = mean, sigma = sigma, distribution = distribution)
 
-                        aug_addnoise_pixels,aug_addnoise_pixels_label, aug_addnoise_pixels_csv  = addnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
+                        aug_addnoise_pixels,aug_addnoise_pixels_label, aug_addnoise_pixels_csv  = addnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                         
                         Name = 'addnoise_pixels' + str(count)
                         imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_addnoise_pixels.astype('float32'))
@@ -114,7 +114,7 @@ for fname in files_raw:
                         #Multiplicative Nosie
                         mulnoise_pixels = TemporalAug(multiplier=multiplier)
 
-                        aug_mulnoise_pixels,aug_mulnoise_pixels_label, aug_mulnoise_pixels_csv  = mulnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
+                        aug_mulnoise_pixels,aug_mulnoise_pixels_label, aug_mulnoise_pixels_csv  = mulnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                         
                         Name = 'mulnoise_pixels' + str(count)
                         imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_mulnoise_pixels.astype('float32'))
@@ -137,7 +137,7 @@ for fname in files_raw:
                             contrast_limit = contrast_limits[i]
                             cbnoise_pixels = TemporalAug(brightness_limit = brightness_limit, contrast_limit = contrast_limit)
 
-                            aug_cbnoise_pixels,aug_cbnoise_pixels_label, aug_cbnoise_pixels_csv  = cbnoise_pixels.build(image = image, labelimage = segimage, labelcsv = csvfname)
+                            aug_cbnoise_pixels,aug_cbnoise_pixels_label, aug_cbnoise_pixels_csv  = cbnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                             
                             Name = 'cblnoise_pixels' + str(count)
                             imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_cbnoise_pixels.astype('float32'))
