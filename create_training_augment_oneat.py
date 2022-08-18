@@ -84,7 +84,14 @@ for fname in files_raw:
                                 imwrite(aug_seg_image_dir + '/' + Csvname + str(rotate_angle) +  Name + '.tif', aug_rotate_pixels_label.astype('uint16'))
                                 aug_rotate_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + str(rotate_angle) + Name +  '.csv', index = False, mode = 'w')
                                 count = count + 1
-
+        for csvfname in files_csv:
+                count = 0  
+                Csvname =  os.path.basename(os.path.splitext(csvfname)[0])
+                for i in  range(0, len(event_type_name)):
+                    event_name = event_type_name[i]
+                    trainlabel = event_type_label[i]
+                    classfound = (Csvname == csv_name_diff +  event_name + name)   
+                    if classfound: 
                         #Additive Noise
                         addnoise_pixels = TemporalAug(mean = mean, sigma = sigma, distribution = distribution)
 
@@ -96,7 +103,14 @@ for fname in files_raw:
                         aug_addnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                         count = count + 1
 
-
+        for csvfname in files_csv:
+                count = 0  
+                Csvname =  os.path.basename(os.path.splitext(csvfname)[0])
+                for i in  range(0, len(event_type_name)):
+                    event_name = event_type_name[i]
+                    trainlabel = event_type_label[i]
+                    classfound = (Csvname == csv_name_diff +  event_name + name)   
+                    if classfound: 
                         #Multiplicative Nosie
                         mulnoise_pixels = TemporalAug(multiplier=multiplier)
 
@@ -107,7 +121,14 @@ for fname in files_raw:
                         imwrite(aug_seg_image_dir + '/' + Csvname +  Name + '.tif', aug_mulnoise_pixels_label.astype('uint16'))
                         aug_mulnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                         count = count + 1
-                        
+        for csvfname in files_csv:
+                count = 0  
+                Csvname =  os.path.basename(os.path.splitext(csvfname)[0])
+                for i in  range(0, len(event_type_name)):
+                    event_name = event_type_name[i]
+                    trainlabel = event_type_label[i]
+                    classfound = (Csvname == csv_name_diff +  event_name + name)   
+                    if classfound:                 
                         #Brightness and Contrast
                    
                         for i in range(len(brightness_limits)):

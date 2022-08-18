@@ -58,7 +58,7 @@ paths:
 
      training_data_seg: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
      training_data_oneat: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/'
-     models_star: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDIst3D/'
+     models_star: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDist3D/'
      models_unet: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
      models_roi:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/MASKUNET/'
      models_oneat: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
