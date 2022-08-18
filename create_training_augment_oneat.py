@@ -5,7 +5,6 @@
 
 from pathlib import Path
 from oneat.NEATUtils import TemporalAug
-from oneat.NEATUtils.helpers import normalizeFloatZeroOne
 import os
 from tifffile import imread, imwrite
 import numpy as np
@@ -60,7 +59,6 @@ for fname in files_raw:
         
         
         image = imread(fname)
-        image = normalizeFloatZeroOne( image.astype('float32'),1,99.8)
         segimage = imread(Segfname)
 
         for csvfname in files_csv:
