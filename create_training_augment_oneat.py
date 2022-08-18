@@ -38,16 +38,16 @@ event_type_name = ["Normal", "Division"]
 event_type_label = [0, 1]
 csv_name_diff = 'ONEAT'
 count = 0
-rotation_angles = [3,6, 9, 12, 15]
+rotation_angles = [3,6,9]
 
 mean = 0.0
-sigma = 5.0
+sigma = 15.0
 distribution = 'Both'
 
 
-brightness_limits = [0.1, 0.2, 0.3]
-contrast_limits = [0.1, 0.2, 0.3]
-multiplier=(0.5, 0.8)
+brightness_limits = 0.1
+contrast_limits = 0.1
+multiplier=(10, 20)
 for fname in files_raw:
                   
     name = os.path.basename(os.path.splitext(fname)[0])   
