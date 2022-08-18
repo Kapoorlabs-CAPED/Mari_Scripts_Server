@@ -45,9 +45,7 @@ sigma = 10.0
 distribution = 'Both'
 
 
-brightness_limits = [0.1]
-contrast_limits = [0.1]
-multiplier=(0.9, 1.2)
+
 for fname in files_raw:
                   
     name = os.path.basename(os.path.splitext(fname)[0])   
@@ -101,45 +99,4 @@ for fname in files_raw:
                         aug_addnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
                         count = count + 1
 
-        for csvfname in files_csv:
-                count = 0  
-                Csvname =  os.path.basename(os.path.splitext(csvfname)[0])
-                for i in  range(0, len(event_type_name)):
-                    event_name = event_type_name[i]
-                    trainlabel = event_type_label[i]
-                    classfound = (Csvname == csv_name_diff +  event_name + name)   
-                    if classfound: 
-                        #Multiplicative Nosie
-                        mulnoise_pixels = TemporalAug(multiplier=multiplier)
-
-                        aug_mulnoise_pixels,aug_mulnoise_pixels_label, aug_mulnoise_pixels_csv  = mulnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
-                        
-                        Name = 'mulnoise_pixels' + str(count)
-                        imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_mulnoise_pixels.astype('float32'))
-                        imwrite(aug_seg_image_dir + '/' + Csvname +  Name + '.tif', aug_mulnoise_pixels_label.astype('uint16'))
-                        aug_mulnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
-                        count = count + 1
-        for csvfname in files_csv:
-                count = 0  
-                Csvname =  os.path.basename(os.path.splitext(csvfname)[0])
-                for i in  range(0, len(event_type_name)):
-                    event_name = event_type_name[i]
-                    trainlabel = event_type_label[i]
-                    classfound = (Csvname == csv_name_diff +  event_name + name)   
-                    if classfound:                 
-                        #Brightness and Contrast
-                   
-                        for i in range(len(brightness_limits)):
-
-                            brightness_limit = brightness_limits[i]
-                            contrast_limit = contrast_limits[i]
-                            cbnoise_pixels = TemporalAug(brightness_limit = brightness_limit, contrast_limit = contrast_limit)
-
-                            aug_cbnoise_pixels,aug_cbnoise_pixels_label, aug_cbnoise_pixels_csv  = cbnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
-                            
-                            Name = 'cblnoise_pixels' + str(count)
-                            imwrite(aug_image_dir + '/'  + Csvname + Name + '.tif', aug_cbnoise_pixels.astype('float32'))
-                            imwrite(aug_seg_image_dir + '/' + Csvname +  Name + '.tif', aug_cbnoise_pixels_label.astype('uint16'))
-                            aug_cbnoise_pixels_csv.to_csv(aug_csv_dir + '/' +'ONEAT' + event_name + Csvname + Name +  '.csv', index = False, mode = 'w')
-                            count = count + 1
-
+        
