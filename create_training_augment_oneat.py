@@ -47,7 +47,7 @@ distribution = 'Both'
 
 brightness_limits = [0.1, 0.2, 0.3]
 contrast_limits = [0.1, 0.2, 0.3]
-multiplier=(0.9, 1.1)
+multiplier=(0.5, 0.8)
 for fname in files_raw:
                   
     name = os.path.basename(os.path.splitext(fname)[0])   
