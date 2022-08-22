@@ -10,7 +10,7 @@ from tifffile import imread, imwrite
 import numpy as np
 
 #Specify the directory containing images
-image_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw/')
+image_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw/undone/')
 #Specify the directory contaiing csv files
 csv_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_csv/')
 #Specify the directory containing the segmentations

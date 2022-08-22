@@ -22,15 +22,15 @@ from pathlib import Path
 
 
 #Specify the directory containing images
-image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw/'
+image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw_aug/'
 #Specify the directory contaiing csv files
-csv_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_csv/'
+csv_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_csv_aug/'
 #Specify the directory containing the segmentations
-seg_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_seg/'
+seg_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_seg_aug/'
 #Specify the model directory where we store the json of categories, training model and parameters
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
 #Directory for storing center ONEAT training data 
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
+save_dir = '/gpfsscratch/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_aug/'
 Path(model_dir).mkdir(exist_ok = True)
 Path(save_dir).mkdir(exist_ok = True)
 
@@ -57,8 +57,8 @@ tshift = 0
 trainshapex = 64
 trainshapey = 64
 normalizeimage = True
-npz_name = 'Xenopus_oneat_training_m1p1_noise'
-npz_val_name = 'Xenopus_oneat_training_m1p1_noiseval'
+npz_name = 'Xenopus_oneat_training_m1p1_aug'
+npz_val_name = 'Xenopus_oneat_training_m1p1_augval'
 crop_size = [trainshapex,trainshapey,size_tminus,size_tplus]
 
 
