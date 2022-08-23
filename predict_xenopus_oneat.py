@@ -10,7 +10,7 @@ from oneat.NEATUtils import helpers
 from oneat.NEATUtils.helpers import load_json
 from pathlib import Path
 
-n_tiles = (1,8,8)
+n_tiles = (1,2,2)
 event_threshold = 0.9
 event_confidence = 0.9
 downsamplefactor = 1
@@ -20,11 +20,11 @@ end_project_mid = 1
 normalize = True
 nms_function = 'iou'
 
-imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
+imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_aug/'
-model_name = 'Cellsplitdetectorxenopus_aug'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/second_dataset/'
+model_name = 'Cellsplitdetectorxenopus'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'
