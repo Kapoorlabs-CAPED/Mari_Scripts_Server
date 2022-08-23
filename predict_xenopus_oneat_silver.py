@@ -4,13 +4,13 @@ import sys
 import os
 import glob
 from csbdeep.models import  CARE
-from oneat.NEATModels import NEATDynamic
+from oneat.NEATModels import NEATCynamic
 from oneat.NEATModels.config import dynamic_config
 from oneat.NEATUtils import helpers
 from oneat.NEATUtils.helpers import load_json
 from pathlib import Path
 
-n_tiles = (1,8,8)
+n_tiles = (1,1,1)
 event_threshold = 0.9
 event_confidence = 0.9
 downsamplefactor = 1
@@ -23,15 +23,15 @@ nms_function = 'iou'
 imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_aug/'
-model_name = 'Cellsplitdetectorxenopus_aug'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_silver_29/'
+model_name = 'Cellsplitdetectorxenopus_aug_d29_silver'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'
 catconfig = load_json(division_categories_json)
 division_cord_json = model_dir + 'Cellsplitcordxenopus.json'
 cordconfig = load_json(division_cord_json)
-model = NEATDynamic(None, model_dir , model_name,catconfig, cordconfig)
+model = NEATCynamic(None, model_dir , model_name,catconfig, cordconfig)
 Path(savedir).mkdir(exist_ok=True)
 Raw_path = os.path.join(imagedir, '*tif')
 X = glob.glob(Raw_path)
