@@ -30,7 +30,7 @@ for fname in files:
      name = os.path.splitext(os.path.basename(fname)[0])
      for i in range(N):
 
-        futures.append(executor.submit(image, i, N))
+        futures.append(executor.submit(normalizer, image = image, i = i, N = N))
      for future in concurrent.futures.as_completed(futures):
             returnimage, index = future.result()
             newimage[index * image.shape[0] // N:(index + 1) * image.shape[0]//N,:] = returnimage
