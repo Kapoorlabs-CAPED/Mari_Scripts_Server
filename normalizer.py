@@ -3,7 +3,7 @@ from pathlib import Path
 import concurrent
 from tifffile import imread, imwrite
 import numpy as np
-from oneat.helpers import  normalizeFloatZeroOne
+from oneat.NEATUtils.helpers import  normalizeFloatZeroOne
 
 inputdir = Path("/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/")
 outputdir = "/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_normalized/"
