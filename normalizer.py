@@ -12,15 +12,24 @@ pattern = '*.tif'
 
 files = list(inputdir.glob(pattern))
 nthreads = 1 
+N = 4
 #os.cpu_count()
-def normalizer(file):
-    image = imread(file).astype('float16')
-    newimage =  normalizeFloatZeroOne( image,1,99.8, dtype= np.float16)
-    return newimage, file.name   
-with concurrent.futures.ThreadPoolExecutor(max_workers = nthreads) as executor:
+def normalizer(image, i, N):
+    smallimage = image[i * image.shape[0] // N:(i + 1) * image.shape[0]//N,:] 
+    newimage =  normalizeFloatZeroOne( smallimage,1,99.8, dtype= np.float16)
+    return newimage , i  
+
+for fname in files:
+    with concurrent.futures.ThreadPoolExecutor(max_workers = nthreads) as executor:
      futures = []
-     for fname in files:
-         futures.append(executor.submit(normalizer, file = fname))
+     
+     image = imread(fname).astype('float16')
+     newimage = image
+     name = os.path.splitext(os.path.basename(fname)[0])
+     for i in range(N):
+
+        futures.append(executor.submit(image, i, N))
      for future in concurrent.futures.as_completed(futures):
-                   newimage, name = future.result()
-                   imwrite(outputdir + '/' + os.path.splitext(name)[0] + '.tif', newimage)
+            returnimage, index = future.result()
+            newimage[index * image.shape[0] // N:(index + 1) * image.shape[0]//N,:] = returnimage
+     imwrite(outputdir + '/' + os.path.splitext(name)[0] + '.tif', newimage)
