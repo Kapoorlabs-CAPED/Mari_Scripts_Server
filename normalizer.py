@@ -11,9 +11,9 @@ Path(outputdir).mkdir(exist_ok=True)
 pattern = '*.tif'
 
 files = list(inputdir.glob(pattern))
-nthreads = 1 
+nthreads = os.cpu_count()
 N = 4
-#os.cpu_count()
+
 def normalizer(image, i, N):
     smallimage = image[i * image.shape[0] // N:(i + 1) * image.shape[0]//N,:] 
     newimage =  normalizeFloatZeroOne( smallimage,1,99.8, dtype= np.float16)
