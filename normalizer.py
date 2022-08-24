@@ -3,14 +3,15 @@ from pathlib import Path
 import concurrent
 from tifffile import imread, imwrite
 import numpy as np
+import glob
 from oneat.NEATUtils.helpers import  normalizeFloatZeroOne
 from dask.array.image import imread as daskread
 inputdir = ("/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/")
 outputdir = "/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_normalized/"
 Path(outputdir).mkdir(exist_ok=True)
 pattern = '*.tif'
-
-files = list(inputdir.glob(pattern))
+Raw_path = os.path.join(inputdir, pattern)
+files = glob.glob(Raw_path)
 nthreads = os.cpu_count()
 N = 4
 
