@@ -14,8 +14,8 @@ files = list(inputdir.glob(pattern))
 nthreads = 1 
 #os.cpu_count()
 def normalizer(file):
-    image = imread(file)
-    newimage =  normalizeFloatZeroOne( image.astype('float32'),1,99.8, dtype= np.float16)
+    image = imread(file).astype('float16')
+    newimage =  normalizeFloatZeroOne( image,1,99.8, dtype= np.float16)
     return newimage, file.name   
 with concurrent.futures.ThreadPoolExecutor(max_workers = nthreads) as executor:
      futures = []
