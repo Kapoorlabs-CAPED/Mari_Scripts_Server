@@ -4,7 +4,7 @@ import concurrent
 from tifffile import imread, imwrite
 import numpy as np
 from oneat.NEATUtils.helpers import  normalizeFloatZeroOne
-
+from dask.array.image import imread as daskread
 inputdir = Path("/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/")
 outputdir = "/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_normalized/"
 Path(outputdir).mkdir(exist_ok=True)
@@ -17,13 +17,14 @@ N = 4
 def normalizer(image, i, N):
     smallimage = image[i * image.shape[0] // N:(i + 1) * image.shape[0]//N,:] 
     newimage =  normalizeFloatZeroOne( smallimage,1,99.8, dtype= np.float16)
+    print(i)
     return newimage , i  
 
 for fname in files:
     with concurrent.futures.ThreadPoolExecutor(max_workers = nthreads) as executor:
      futures = []
      
-     image = imread(fname).astype('float16')
+     image = daskread(fname)[0].astype('float16')
      newimage = image
      name = os.path.splitext(os.path.basename(fname)[0])
      for i in range(N):
