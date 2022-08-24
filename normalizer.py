@@ -17,7 +17,7 @@ N = 4
 
 def normalizer(image, i, N):
     smallimage = image[i * image.shape[0] // N:(i + 1) * image.shape[0]//N,:] 
-    newimage =  normalizeFloatZeroOne( smallimage,1,99.8, dtype= np.float16)
+    newimage =  normalizeFloatZeroOne( smallimage.compute(),1,99.8, dtype= np.float16)
     print(i)
     return newimage , i  
 
