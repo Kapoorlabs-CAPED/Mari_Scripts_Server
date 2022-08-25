@@ -14,13 +14,13 @@ from oneat.NEATUtils.helpers import save_json, load_json
 
 
 
-npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_noise/'
-npz_name = 'Xenopus_oneat_training_m1p1_noise.npz'
-npz_val_name = 'Xenopus_oneat_training_m1p1_noiseval.npz'
+npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_aug/'
+npz_name = 'Xenopus_oneat_training_m1p1_aug.npz'
+npz_val_name = 'Xenopus_oneat_training_m1p1_augval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopus_noise.h5'
+model_name = 'Cellsplitdetectorxenopus_aug.h5'
 
 
 
