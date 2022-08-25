@@ -12,7 +12,7 @@ Path(outputdir).mkdir(exist_ok=True)
 pattern = '*.tif'
 Raw_path = os.path.join(inputdir, pattern)
 files = glob.glob(Raw_path)
-nthreads = os.cpu_count()
+nthreads = 1 #os.cpu_count()
 N = 4
 
 def normalizer(image, i, N):

@@ -20,7 +20,7 @@ npz_val_name = 'Xenopus_oneat_training_m1p1_augval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopus_aug_d101_silver.h5'
+model_name = 'Cellsplitdetectorxenopus_aug_d38_f64_silver.h5'
 
 
 
@@ -33,18 +33,17 @@ key_cord = load_json(division_cord_json)
 #For ORNET use residual = True and for OSNET use residual = False
 residual = True
 #Number of starting convolutional filters, is doubled down with increasing depth
-startfilter = 32
+startfilter = 64
 #CNN network start layer, mid layers and lstm layer kernel size
 start_kernel = 7
 mid_kernel = 3
 #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
-depth = 101
+depth = 38
 #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
 learning_rate = 1.0E-3
 #For stochastic gradient decent, the batch size used for computing the gradients
 batch_size = 20
 # use softmax for single event per box, sigmoid for multi event per box
-
 #Training epochs, longer the better with proper chosen learning rate
 epochs = 250
 nboxes = 1
@@ -55,9 +54,7 @@ size_tminus = 1
 size_tplus = 1
 imagex = 64
 imagey = 64
-yolo_v0 = False
-yolo_v1 = True
-yolo_v2 = False
+
 
 
 
@@ -65,10 +62,8 @@ yolo_v2 = False
 
 config = dynamic_config(npz_directory =npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, 
                          key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
-                         imagey = imagey, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs, yolo_v0 = yolo_v0, yolo_v1 = yolo_v1, yolo_v2 = yolo_v2,learning_rate = learning_rate,
-                         residual = residual, depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
-                          show = show,
-                         startfilter = startfilter, batch_size = batch_size, model_name = model_name)
+                         imagey = imagey, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs, learning_rate = learning_rate,
+                         residual = residual, depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number, show = show, startfilter = startfilter, batch_size = batch_size, model_name = model_name)
 
 config_json = config.to_json()
 
