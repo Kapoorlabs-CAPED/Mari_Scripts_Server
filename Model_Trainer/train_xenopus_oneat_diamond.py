@@ -7,7 +7,7 @@ import sys
 import os
 from glob import glob
 from oneat.NEATModels import NEATEynamic
-from oneat.NEATModels.config import dynamic_config
+from oneat.NEATModels.config import diamond_config
 from oneat.NEATUtils.helpers import save_json, load_json
 
 
@@ -62,7 +62,7 @@ imagez = 4
 
 
 
-config = dynamic_config(npz_directory =npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, 
+config = diamond_config(npz_directory =npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, 
                          key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
                          imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
                          residual = residual, depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
