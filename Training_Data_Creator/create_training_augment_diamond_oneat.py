@@ -56,8 +56,8 @@ for fname in files_raw:
       if name == Segname:
         
         
-        image = imread(fname)
-        segimage = imread(Segfname)
+        image = imread(fname).astype('uint8')
+        segimage = imread(Segfname).astype('uint16')
 
         for csvfname in files_csv:
                 count = 0  
@@ -79,7 +79,7 @@ for fname in files_raw:
                                 save_name_raw = aug_image_dir + '/' + 'rotation_' +  str(rotate_angle) + name + '.tif'
                                 save_name_seg = aug_seg_image_dir + '/' + 'rotation_' +  str(rotate_angle) + name + '.tif'
                                 if os.path.exists(save_name_raw) == False:
-                                    imwrite(save_name_raw, aug_rotate_pixels.astype('float32'))
+                                    imwrite(save_name_raw, aug_rotate_pixels.astype('uint8'))
                                 if os.path.exists(save_name_seg) == False:    
                                     imwrite(save_name_seg, aug_rotate_pixels_label.astype('uint16'))
                                 aug_rotate_pixels_csv.to_csv(aug_csv_dir + '/' + csv_name_diff + event_name + 'rotation_' +  str(rotate_angle) + name +  '.csv', index = False, mode = 'w')
@@ -100,7 +100,7 @@ for fname in files_raw:
                         save_name_raw = aug_image_dir + '/' + 'noise_' +  str(sigma) + name + '.tif'
                         save_name_seg = aug_seg_image_dir + '/' + 'noise_' +   str(sigma) + name + '.tif'
                         if os.path.exists(save_name_raw) == False:
-                            imwrite(save_name_raw, aug_addnoise_pixels.astype('float32'))
+                            imwrite(save_name_raw, aug_addnoise_pixels.astype('uint8'))
                         if os.path.exists(save_name_seg) == False:    
                             imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
                         aug_addnoise_pixels_csv.to_csv(aug_csv_dir + '/' + csv_name_diff + event_name + 'noise_' +   str(sigma) + name +  '.csv', index = False, mode = 'w')
