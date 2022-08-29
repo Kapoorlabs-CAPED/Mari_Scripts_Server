@@ -14,13 +14,13 @@ from oneat.NEATUtils.helpers import save_json, load_json
 
 
 
-npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_aug/'
+npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
 npz_name = 'Xenopus_oneat_training_m1p1_aug.npz'
 npz_val_name = 'Xenopus_oneat_training_m1p1_augval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopus_aug.h5'
+model_name = 'Cellsplitdetectorxenopuslstm.h5'
 
 
 
@@ -56,17 +56,13 @@ size_tminus = 1
 size_tplus = 1
 imagex = 64
 imagey = 64
-yolo_v0 = False
 yolo_v1 = True
-yolo_v2 = False
-
-
 
 
 
 config = dynamic_config(npz_directory =npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, 
                          key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
-                         imagey = imagey, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs, yolo_v0 = yolo_v0, yolo_v1 = yolo_v1, yolo_v2 = yolo_v2,learning_rate = learning_rate,
+                         imagey = imagey, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs, learning_rate = learning_rate,
                          residual = residual, depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
                          lstm_kernel = lstm_kernel, lstm_hidden_unit = lstm_hidden_unit, show = show,
                          startfilter = startfilter, batch_size = batch_size, model_name = model_name)

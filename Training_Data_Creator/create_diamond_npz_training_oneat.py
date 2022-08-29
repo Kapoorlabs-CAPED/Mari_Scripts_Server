@@ -37,7 +37,7 @@ size_tplus = 1
 trainshapex = 64
 trainshapey = 64
 trainshapez = 8
-normalizeimage = False
+normalizeimage = True
 npz_name = 'Xenopus_oneat_training_m1p1_diamond'
 npz_val_name = 'Xenopus_oneat_training_m1p1_diamondval'
 crop_size = [trainshapex,trainshapey,trainshapez,size_tminus,size_tplus]
@@ -57,20 +57,20 @@ save_json(dynamic_cord_json, model_dir + "Cellsplitdiamondcordxenopus" + '.json'
 
 
 
-MovieCreator.VolumeLabelDataSet(image_dir, 
-                               seg_image_dir, 
-                               csv_dir, 
-                               save_dir, 
-                               event_type_name, 
-                               event_type_label, 
-                               csv_name_diff,
-                               crop_size,
-                               normalizeimage = normalizeimage)
+#MovieCreator.VolumeLabelDataSet(image_dir, 
+                               #seg_image_dir, 
+                               #csv_dir, 
+                               #save_dir, 
+                               #event_type_name, 
+                               #event_type_label, 
+                               #csv_name_diff,
+                               #crop_size,
+                               #normalizeimage = normalizeimage)
 
 
 
 
-MovieCreator.createNPZ(save_dir, axes = 'STZYXC', save_name = npz_name, save_name_val = npz_val_name)
+#MovieCreator.createNPZ(save_dir, axes = 'STZYXC', save_name = npz_name, save_name_val = npz_val_name)
 
 
 

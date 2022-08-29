@@ -23,8 +23,8 @@ nms_function = 'iou'
 imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_silver_29/'
-model_name = 'Cellsplitdetectorxenopus_aug_d29_silver'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_scalarcnn/'
+model_name = 'Cellsplitdetectorxenopusscalarcnn'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'

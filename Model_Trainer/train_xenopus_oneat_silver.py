@@ -14,13 +14,13 @@ from oneat.NEATUtils.helpers import save_json, load_json
 
 
 
-npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1_aug/'
+npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'
 npz_name = 'Xenopus_oneat_training_m1p1_aug.npz'
 npz_val_name = 'Xenopus_oneat_training_m1p1_augval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopus_aug_d38_f64_silver.h5'
+model_name = 'Cellsplitdetectorxenopusscalarcnn.h5'
 
 
 
@@ -33,7 +33,7 @@ key_cord = load_json(division_cord_json)
 #For ORNET use residual = True and for OSNET use residual = False
 residual = True
 #Number of starting convolutional filters, is doubled down with increasing depth
-startfilter = 64
+startfilter = 48
 #CNN network start layer, mid layers and lstm layer kernel size
 start_kernel = 7
 mid_kernel = 3

@@ -20,11 +20,11 @@ end_project_mid = 1
 normalize = True
 nms_function = 'iou'
 
-imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset/'
+imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/second_dataset/'
-model_name = 'Cellsplitdetectorxenopus'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_lstm/'
+model_name = 'Cellsplitdetectorxenopuslstm'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'

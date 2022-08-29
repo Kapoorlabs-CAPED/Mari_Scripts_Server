@@ -14,15 +14,14 @@ from tifffile import imread
 n_tiles = (1,1,1)
 event_threshold = 0.9
 event_confidence = 0.9
-downsamplefactor = 1
 normalize = True
 nms_function = 'iou'
 
 imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_diamond_92/'
-model_name = 'Cellsplitdetectordiamondxenopus_d92_f48'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn/'
+model_name = 'Cellsplitdetectorxenopusvolumecnn'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitdiamondcategoriesxenopus.json'
@@ -49,6 +48,7 @@ for imagename in X:
                            event_confidence = event_confidence,
                            marker_tree = marker_tree, 
                            remove_markers = remove_markers,
+                           dtype = 'uint16',
                            nms_function = nms_function,
                            normalize = normalize)
 
