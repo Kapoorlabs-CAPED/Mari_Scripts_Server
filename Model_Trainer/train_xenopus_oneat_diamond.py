@@ -14,7 +14,7 @@ from oneat.NEATUtils.helpers import save_json, load_json
 
 
 
-npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
+npz_directory = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1_aug/'
 npz_name = 'Xenopus_oneat_training_m1p1_diamond.npz'
 npz_val_name = 'Xenopus_oneat_training_m1p1_diamondval.npz'
 

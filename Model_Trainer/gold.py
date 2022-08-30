@@ -20,7 +20,7 @@ npz_val_name = 'Xenopus_oneat_training_m1p1_augval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopuslstm_f16.h5'
+model_name = 'Cellsplitdetectorxenopuslstm.h5'
 
 
 
@@ -33,7 +33,7 @@ key_cord = load_json(division_cord_json)
 #For ORNET use residual = True and for OSNET use residual = False
 residual = True
 #Number of starting convolutional filters, is doubled down with increasing depth
-startfilter = 16
+startfilter = 48
 #CNN network start layer, mid layers and lstm layer kernel size
 start_kernel = 7
 lstm_kernel = 3
