@@ -8,9 +8,9 @@ from vollseg import StarDist3D, UNET, VollSeg, MASKUNET, CARE
 from pathlib import Path
 
 
-image_dir = '/gpfsstore/rech/jsy/uzj81mi/Tracking_challenge/split_dataset/'
-model_dir = '/gpfsdsstore/projects/rech/jsy/uzj81mi/Segmentation_Models/'
-save_dir = '/gpfsstore/rech/jsy/uzj81mi/Tracking_challenge/july_2022_segmentation_results/'
+image_dir = '/mnt/d/jean_zay_backup/Tracking_challenge/split_dataset/'
+model_dir = '/mnt/d/jean_zay_backup/Segmentation_Models/'
+save_dir = '/mnt/d/jean_zay_backup/Tracking_challenge/july_2022_segmentation_results/'
  
 unet_model_name = 'Unet3D/Unet_Nuclei_Xenopus/'
 star_model_name = 'StarDist3D/Carcinoma_cells/'

@@ -20,8 +20,8 @@ nms_function = 'iou'
 imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 segdir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
 model_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/'
-savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn/'
-model_name = 'Cellsplitdetectorxenopusvolumecnn'
+savedir= '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d101/'
+model_name = 'Cellsplitdetectorxenopusvolumecnn_d101'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitdiamondcategoriesxenopus.json'
@@ -48,7 +48,7 @@ for imagename in X:
                            event_confidence = event_confidence,
                            marker_tree = marker_tree, 
                            remove_markers = remove_markers,
-                           dtype = 'uint16',
+                        
                            nms_function = nms_function,
                            normalize = normalize)
 

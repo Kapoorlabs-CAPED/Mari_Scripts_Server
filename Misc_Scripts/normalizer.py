@@ -6,8 +6,8 @@ import numpy as np
 import glob
 from oneat.NEATUtils.helpers import  normalizeFloatZeroOne
 from dask.array.image import imread as daskread
-inputdir = ("/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/")
-outputdir = "/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_normalized/"
+inputdir = ("/mnt/d/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/")
+outputdir = "/mnt/d/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_normalized/"
 Path(outputdir).mkdir(exist_ok=True)
 pattern = '*.tif'
 Raw_path = os.path.join(inputdir, pattern)

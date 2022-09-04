@@ -5,8 +5,8 @@ import os
 import glob
 from natsort import natsorted
 import re
-imagedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/third_dataset_split/seg/StarDist/'
-savedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/'
+imagedir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/raw/third_dataset_split/seg/StarDist/'
+savedir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/seg/'
 search_pattern = '[0-9]+$'
 
 

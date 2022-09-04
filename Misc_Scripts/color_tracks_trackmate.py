@@ -14,13 +14,13 @@ qtpy.QtWidgets.QApplication([])
 
 
 #Trackmate writes an XML file of tracks, we use it as input
-xml_path = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/tracking_results/tracks_third_dataset_star_mari_principle_a30.xml' 
+xml_path = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/tracking_results/tracks_third_dataset_star_mari_principle_a30.xml' 
 #Path to Segmentation image for extracting any track information from labels 
-LabelImage = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/Max_third_dataset_star.tif'
+LabelImage = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/seg/Max_third_dataset_star.tif'
 #Trackmate writes a spots and tracks file as csv
-spot_csv = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/tracking_results/spots_third_dataset.csv'
-track_csv = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/tracking_results/tracks_third_dataset.csv'
-savedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/tracking_results'
+spot_csv = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/tracking_results/spots_third_dataset.csv'
+track_csv = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/tracking_results/tracks_third_dataset.csv'
+savedir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/tracking_results'
 Path(savedir).mkdir(exist_ok=True)
 scale = 255
 
