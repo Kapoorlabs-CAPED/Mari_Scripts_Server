@@ -18,7 +18,7 @@ nms_function = 'iou'
 
 imagedir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/raw/gt/'
 segdir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/seg/'
-model_dir = '/mnt/d/jean_zay_backup/Mari_Models/Oneat/'
+model_dir = '/mnt/d/MariProject/Mari_Models/Oneat/'
 savedir= '/mnt/d/jean_zay_backup/Mari_Data_Oneat/revolution_results/oneat_results/gt_lstm/'
 model_name = 'Cellsplitdetectorxenopuslstm'
 

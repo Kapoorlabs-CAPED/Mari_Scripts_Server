@@ -7,7 +7,7 @@ from oneat.NEATUtils.helpers import load_json
 from pathlib import Path
 from tifffile import imread
 
-n_tiles = (1,1,1)
+n_tiles = (2,2,2)
 event_threshold = 0.9
 event_confidence = 0.9
 normalize = True
@@ -15,9 +15,9 @@ nms_function = 'iou'
 
 imagedir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/raw/gt/'
 segdir = '/mnt/d/jean_zay_backup/Mari_Data_Oneat/seg/'
-model_dir = '/mnt/d/jean_zay_backup/Mari_Models/Oneat/'
-savedir= '/mnt/d/jean_zay_backup/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d101/'
-model_name = 'Cellsplitdetectorxenopusvolumecnn_d101'
+model_dir = '/mnt/d/MariProject/Mari_Models/Oneat/'
+savedir= '/mnt/d/jean_zay_backup/Mari_Data_Oneat/revolution_results/oneat_results/gt_d56_f64/'
+model_name = 'Cellsplitdetectorxenopusvolumecnn_d56_f64'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitdiamondcategoriesxenopus.json'
