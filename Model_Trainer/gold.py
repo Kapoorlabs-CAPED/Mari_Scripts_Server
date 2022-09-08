@@ -8,7 +8,7 @@ import os
 from glob import glob
 from oneat.NEATModels import NEATDynamic
 from oneat.NEATModels.config import dynamic_config
-from oneat.NEATUtils.helpers import save_json, load_json
+from oneat.NEATUtils.utils import save_json, load_json
 
 
 

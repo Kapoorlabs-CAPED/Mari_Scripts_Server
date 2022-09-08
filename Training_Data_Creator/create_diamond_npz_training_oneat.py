@@ -3,7 +3,7 @@
 
 import numpy as np
 from oneat.NEATUtils import MovieCreator
-from oneat.NEATUtils.helpers import save_json
+from oneat.NEATUtils.utils import save_json
 from oneat.NEATModels.TrainConfig import TrainConfig
 from pathlib import Path
 

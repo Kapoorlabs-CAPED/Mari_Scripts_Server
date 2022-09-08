@@ -1,20 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
-import os
-import glob
+
 from vollseg import SmartSeeds3D
-from tifffile import imread, imwrite
 
 
-# # In the cell below specify the following:
-# 
-# 
 
-# In[ ]:
 
 
 base_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
@@ -27,11 +17,7 @@ real_mask_dir = 'real_mask/'
 binary_mask_dir = 'binary_mask/'
 
 
-# # In this cell choose the network training parameters for the Neural Network
-# 
-# 
 
-# In[ ]:
 
 
 #Network training parameters

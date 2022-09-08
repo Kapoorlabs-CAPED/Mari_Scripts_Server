@@ -3,7 +3,7 @@
 import os
 import glob
 from oneat.NEATModels import NEATEynamic
-from oneat.NEATUtils.helpers import load_json
+from oneat.NEATUtils.utils import load_json
 from pathlib import Path
 from tifffile import imread
 

@@ -4,7 +4,7 @@
 import os
 from oneat.NEATModels import NEATCynamic
 from oneat.NEATModels.config import dynamic_config
-from oneat.NEATUtils.helpers import save_json, load_json
+from oneat.NEATUtils.utils import save_json, load_json
 
 
 npz_directory = '/mnt/d/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_patches_m1p1/'

@@ -4,7 +4,7 @@
 
 
 from pathlib import Path
-from oneat.NEATUtils import TemporalZAug
+from oneat_augmentations import TemporalZAug
 import os
 from tifffile import imread, imwrite
 import numpy as np
