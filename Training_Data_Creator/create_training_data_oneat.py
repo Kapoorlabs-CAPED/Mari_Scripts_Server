@@ -10,9 +10,8 @@ import glob
 from pathlib import Path
 from tifffile import imread
 import numpy as np
-import csv
 import pandas as pd
-from qtpy.QtWidgets import QComboBox, QPushButton, QSlider
+from qtpy.QtWidgets import QComboBox, QPushButton
 from qtpy.QtWidgets import QApplication
 app = QApplication([])
 
