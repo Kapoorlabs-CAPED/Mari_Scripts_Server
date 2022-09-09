@@ -15,8 +15,8 @@ nms_function = 'iou'
 
 imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segdir = '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
-model_dir = '/mnt/d/MariProject/Mari_Models/Oneat/'
-savedir= '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_d56_f64/'
+model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/'
+savedir= '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d56_f64/'
 model_name = 'Cellsplitdetectorxenopusvolumecnn_d56_f64'
 
 remove_markers = False
