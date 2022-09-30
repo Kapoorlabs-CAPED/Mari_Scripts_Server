@@ -1,0 +1,3 @@
+npz_name: 'Xenopus_oneat_training_m1p1_diamond.npz'
+npz_val_name: 'Xenopus_oneat_training_m1p1_diamondval.npz'
+model_name: 'Cellsplitdetectorxenopusvolumecnn_d29_f16.h5'
