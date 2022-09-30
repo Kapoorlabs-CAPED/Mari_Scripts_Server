@@ -6,8 +6,8 @@ from oneat.NEATModels import NEATDynamic
 from oneat.NEATUtils.utils import load_json
 from pathlib import Path
 
-n_tiles = (1,2,2)
-event_threshold = 0.9
+n_tiles = (1,1,1)
+event_threshold = 0.9999
 event_confidence = 0.9
 downsamplefactor = 1
 #For a Z of 0 to 22 this setup takes the slices from 11 - 4 = 7 to 11 + 1 = 12
@@ -19,8 +19,8 @@ nms_function = 'iou'
 imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segdir = '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
 model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/'
-savedir= '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d101_f48/'
-model_name = 'Cellsplitdetectorxenopusvolumecnn_d101'
+savedir= '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_lstm_d38_f48/'
+model_name = 'Cellsplitdetectorxenopuslstm'
 
 remove_markers = False
 division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'

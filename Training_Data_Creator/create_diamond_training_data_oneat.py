@@ -83,8 +83,8 @@ class EventViewer(object):
 
 def main():
 
-   sourcedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/'
-   csv_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_csv/'
+   sourcedir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw/'
+   csv_dir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv/'
    Imageids = []
    Boxname = 'ImageIDBox'
    Path(csv_dir).mkdir(exist_ok = True)

@@ -4,9 +4,9 @@ from tifffile import imread
 from vollseg import StarDist3D, UNET, VollSeg, MASKUNET
 
 
-image_dir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/dataset/'
+image_dir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/second_dataset/split_dataset/'
 model_dir = '/mnt/WorkHorse/Mari_Models/'
-save_dir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/dataset/seg/'
+save_dir = '/mnt/WorkHorse/Mari_Data_Oneat/seg/second_dataset/split_dataset/'
  
 unet_model_name = 'Unet3D/unet_nuclei_xenopus_mari/'
 star_model_name = 'StarDist3D/nuclei_xenopus_mari/'

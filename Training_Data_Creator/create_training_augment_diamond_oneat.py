@@ -10,17 +10,17 @@ from tifffile import imread, imwrite
 import numpy as np
 
 #Specify the directory containing images
-image_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw/')
+image_dir = Path('/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw/')
 #Specify the directory contaiing csv files
-csv_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_csv/')
+csv_dir = Path('/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv/')
 #Specify the directory containing the segmentations
-seg_image_dir = Path('/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_seg/')
+seg_image_dir = Path('/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg/')
 #Specify the directory for storing the augmented images
-aug_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_raw_aug/'
+aug_image_dir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
 #Specify the directory for storing the augmented labels
-aug_seg_image_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_seg_aug/'
+aug_seg_image_dir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
 #Specify the directory for storing the augmented csv files
-aug_csv_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_csv_aug/'
+aug_csv_dir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv_aug/'
 
 Path(aug_image_dir).mkdir(exist_ok = True)
 Path(aug_seg_image_dir).mkdir(exist_ok = True)
@@ -38,7 +38,7 @@ event_type_name = ["Normal", "Division"]
 event_type_label = [0, 1]
 csv_name_diff = 'ONEAT'
 count = 0
-rotation_angles = [3,6,9,12]
+rotation_angles = [3,6,9]
 
 mean = 0.0
 sigma = 10.0

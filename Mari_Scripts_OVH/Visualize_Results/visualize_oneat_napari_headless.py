@@ -8,7 +8,7 @@ from oneat.NEATUtils import NEATViz
 
 
 
-imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/'
+imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segimagedir = '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
 csvdir = '/mnt/WorkHorse/oneat_metrics/'
 savedir = '/mnt/WorkHorse/oneat_metrics/CleanCSV/'
@@ -22,6 +22,7 @@ Vizdetections = NEATViz(imagedir,
                         categories_json,
                         segimagedir = segimagedir,
                         headless = True,
+                        batch = True,
                         fileextension = fileextension,
                         start_project_mid = start_project_mid,
                         end_project_mid = end_project_mid)

@@ -7,13 +7,13 @@ from oneat.NEATUtils.utils import load_json
 from pathlib import Path
 from tifffile import imread
 
-n_tiles = (2,2,2)
-event_threshold = 0.9
+n_tiles = (1,1,1)
+event_threshold = 0.9999
 event_confidence = 0.9
 normalize = True
 nms_function = 'iou'
 
-imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
+imagedir = '/mnt/WorkHorse/Mari_Data_Oneat/raw_denoised/gt/'
 segdir = '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
 model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/'
 savedir= '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d101_f48/'

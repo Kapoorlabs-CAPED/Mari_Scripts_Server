@@ -6,13 +6,13 @@ from oneat.NEATModels import NEATEynamic
 from oneat.NEATModels.config import diamond_config
 from oneat.NEATUtils.utils import save_json, load_json
 
-npz_directory = '/mnt/WorkHorse/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1_aug/'
+npz_directory = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
 npz_name = 'Xenopus_oneat_training_m1p1_diamond.npz'
 npz_val_name = 'Xenopus_oneat_training_m1p1_diamondval.npz'
 
 #Read and Write the h5 file, directory location and name
 model_dir =  '/mnt/WorkHorse/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopusvolumecnn_d101_f64.h5'
+model_name = 'Cellsplitdetectorxenopusvolumecnn_d29_f16.h5'
 
 
 #Neural network parameters
@@ -24,16 +24,16 @@ key_cord = load_json(division_cord_json)
 #For ORNET use residual = True and for OSNET use residual = False
 residual = True
 #Number of starting convolutional filters, is doubled down with increasing depth
-startfilter = 64
+startfilter = 16
 #CNN network start layer, mid layers and lstm layer kernel size
 start_kernel = 7
 mid_kernel = 3
 #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
-depth = 101
+depth = 29
 #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
-learning_rate = 1.0E-4
+learning_rate = 1.0E-5
 #For stochastic gradient decent, the batch size used for computing the gradients
-batch_size = 4
+batch_size = 16
 # use softmax for single event per box, sigmoid for multi event per box
 
 #Training epochs, longer the better with proper chosen learning rate
