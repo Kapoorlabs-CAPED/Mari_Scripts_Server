@@ -20,3 +20,9 @@ params:
     train_unet: True
     train_star: False
     train_loss: 'mae'
+
+defaults:
+   - files: vollseg_files_ovh
+   - paths: vollseg_paths_ovh
+   - _self_ 
+       

@@ -12,3 +12,7 @@ params:
     size_tplus: 1
     imagex: 64
     imagey: 64
+defaults:
+   - files: oneat_files_ovh
+   - paths: oneat_paths_ovh
+   - _self_     
