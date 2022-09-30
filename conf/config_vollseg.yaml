@@ -1,0 +1,22 @@
+params:
+   
+    depth: 4
+    epochs: 200
+    learning_rate: 0.0003
+    batch_size: 2
+    patch_x: 128
+    patch_y: 128
+    patch_z: 16
+    kern_size: 3
+    n_patches_per_image: 32
+    n_rays: 96
+    startfilter: 32
+    use_gpu_opencl: False
+    generate_npz: False
+    backbone: 'unet'
+    load_data_sequence: False
+    validation_split: 0.01
+    n_channel_in: 1
+    train_unet: True
+    train_star: False
+    train_loss: 'mae'
