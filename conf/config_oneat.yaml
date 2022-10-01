@@ -1,3 +1,5 @@
+
+
 params:
     startfilter: 48
     start_kernel: 7
@@ -15,7 +17,11 @@ params:
     imagez: 8
     nboxes: 1
     pure_lstm: False
+
+trainclass:
+     training_class: NEATEynamic
+
 defaults:
-   - files: oneat_files
-   - paths: oneat_paths_ovh
+   - files_oneat: oneat_files
+   - paths_oneat: oneat_paths_ovh
    - _self_     

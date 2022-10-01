@@ -20,6 +20,10 @@ class Params:
     pure_lstm: bool
     
 @dataclass
+class Trainclass:
+    training_class : type    
+    
+@dataclass
 class Files:
     npz_name: str
     npz_val_name: str
@@ -39,4 +43,6 @@ class TrainOneatConfig:
     
     paths: Paths 
     files: Files 
-    params: Params    
+    params: Params 
+    trainclass :Trainclass 
+      

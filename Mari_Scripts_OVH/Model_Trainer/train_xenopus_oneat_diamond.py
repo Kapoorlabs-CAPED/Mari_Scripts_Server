@@ -6,7 +6,7 @@ import os
 from oneat.NEATModels import NEATEynamic
 from oneat.NEATModels.config import diamond_config
 from oneat.NEATUtils.utils import save_json, load_json
-
+import hydra
 from config_oneat import TrainOneatConfig
 from hydra.core.config_store import ConfigStore
 

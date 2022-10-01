@@ -6,6 +6,7 @@ from oneat.NEATModels import NEATCynamic
 from oneat.NEATModels.config import dynamic_config
 from oneat.NEATUtils.utils import save_json, load_json
 from config_oneat import TrainOneatConfig
+import hydra
 from hydra.core.config_store import ConfigStore
 
 

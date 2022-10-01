@@ -6,6 +6,7 @@ from oneat.NEATModels import NEATLDynamic
 from oneat.NEATModels.config import dynamic_config
 from oneat.NEATUtils.utils import save_json, load_json
 from config_oneat import TrainOneatConfig
+import hydra
 from hydra.core.config_store import ConfigStore
 
 
@@ -62,14 +63,8 @@ def main( config : TrainOneatConfig):
 
         print(config)
         save_json(config_json, model_dir + os.path.splitext(model_name)[0] + '_Parameter.json')
-
-
-
-
         Train = NEATLDynamic(config, model_dir, model_name)
-
         Train.loadData()
-
         Train.TrainModel()
 
 if __name__ == '__main__':
