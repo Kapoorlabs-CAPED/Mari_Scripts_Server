@@ -12,6 +12,8 @@ params:
     size_tplus: 1
     imagex: 64
     imagey: 64
+    imagez: 8
+    nboxes: 1
 defaults:
    - files: oneat_files
    - paths: oneat_paths_ovh

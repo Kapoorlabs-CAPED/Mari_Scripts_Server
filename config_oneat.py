@@ -15,6 +15,8 @@ class Params:
     size_tplus: int 
     imagex: int 
     imagey: int
+    imagez: int
+    nboxes: int
     
 @dataclass
 class Files:
@@ -28,7 +30,8 @@ class Files:
     
 @dataclass
 class Paths:
-    model_dir : str         
+    model_dir : str  
+    npz_directory : str       
     
 @dataclass 
 class TrainOneatConfig:

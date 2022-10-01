@@ -1,1 +1,2 @@
 model_dir:  '/mnt/WorkHorse/Mari_Models/Oneat/'
+npz_directory: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
