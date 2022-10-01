@@ -18,20 +18,19 @@ class Params:
     imagez: int
     nboxes: int
     pure_lstm: bool
+    cord_json: str
     
 @dataclass
 class Trainclass:
     training_class : type    
+    training_config : type
     
 @dataclass
 class Files:
     npz_name: str
     npz_val_name: str
     model_name: str
-    vollnet_categories_json: str
-    vollnet_cord_json: str
-    lstmnet_categories_json: str
-    lstmnet_cord_json: str
+    categories_json: str
     
 @dataclass
 class Paths:
@@ -41,8 +40,8 @@ class Paths:
 @dataclass 
 class TrainOneatConfig:
     
-    paths: Paths 
-    files: Files 
+    paths_oneat: Paths 
+    files_oneat: Files 
     params: Params 
     trainclass :Trainclass 
       

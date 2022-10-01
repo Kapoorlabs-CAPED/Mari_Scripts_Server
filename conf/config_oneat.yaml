@@ -17,9 +17,11 @@ params:
     imagez: 8
     nboxes: 1
     pure_lstm: False
+    cord_json: 'Cellsplitdiamondcordxenopus.json'
 
 trainclass:
      training_class: NEATEynamic
+     training_config: diamond_config
 
 defaults:
    - files_oneat: oneat_files

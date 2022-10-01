@@ -1,7 +1,5 @@
 npz_name: 'Xenopus_oneat_training_m1p1_diamond.npz'
 npz_val_name: 'Xenopus_oneat_training_m1p1_diamondval.npz'
 model_name: 'Cellsplitdetectorxenopusvolumecnn_d29_f16.h5'
-vollnet_categories_json: 'Cellsplitdiamondcategoriesxenopus.json'
-vollnet_cord_json: 'Cellsplitdiamondcordxenopus.json'
-lstmnet_categories_json: 'Cellsplitcategoriesxenopus.json'
-lstmnet_cord_json: 'Cellsplitcordxenopus.json'
+categories_json: 'Cellsplitcategoriesxenopus.json'
+
