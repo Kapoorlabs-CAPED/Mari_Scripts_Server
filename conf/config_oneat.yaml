@@ -14,6 +14,7 @@ params:
     imagey: 64
     imagez: 8
     nboxes: 1
+    pure_lstm: False
 defaults:
    - files: oneat_files
    - paths: oneat_paths_ovh

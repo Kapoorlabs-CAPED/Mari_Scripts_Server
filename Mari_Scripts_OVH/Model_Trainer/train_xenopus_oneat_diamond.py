@@ -2,10 +2,12 @@
 # coding: utf-8
 
 import os
-from config_oneat import TrainOneatConfig
+
 from oneat.NEATModels import NEATEynamic
 from oneat.NEATModels.config import diamond_config
 from oneat.NEATUtils.utils import save_json, load_json
+
+from config_oneat import TrainOneatConfig
 from hydra.core.config_store import ConfigStore
 
 configstore = ConfigStore.instance()
@@ -63,7 +65,8 @@ def main( config : TrainOneatConfig):
     Train.loadData()
     Train.TrainModel()
 
-
+if __name__ == '__main__':
+    main()  
 
 
 

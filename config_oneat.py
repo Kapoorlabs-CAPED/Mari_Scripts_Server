@@ -17,6 +17,7 @@ class Params:
     imagey: int
     imagez: int
     nboxes: int
+    pure_lstm: bool
     
 @dataclass
 class Files:
