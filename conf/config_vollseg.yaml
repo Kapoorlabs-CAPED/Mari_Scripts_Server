@@ -20,6 +20,12 @@ params:
     train_unet: True
     train_star: False
     train_loss: 'mae'
+    file_type: '*.tif'
+    min_size: 1
+    min_size_mask: 10
+    max_size: 1000000
+    n_tiles: (4,4,4)
+    axes: 'ZYX'
 
 defaults:
    - files_vollseg: vollseg_files

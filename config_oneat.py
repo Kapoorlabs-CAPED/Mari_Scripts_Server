@@ -38,7 +38,7 @@ class Paths:
     npz_directory : str       
     
 @dataclass 
-class TrainOneatConfig:
+class OneatConfig:
     
     paths_oneat: Paths 
     files_oneat: Files 

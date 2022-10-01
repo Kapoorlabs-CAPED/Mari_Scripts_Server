@@ -7,14 +7,14 @@ from oneat.NEATModels import NEATCynamic, NEATDynamic, NEATEynamic, NEATLDynamic
 from oneat.NEATModels.config import diamond_config, dynamic_config
 from oneat.NEATUtils.utils import save_json, load_json
 import hydra
-from config_oneat import TrainOneatConfig
+from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
 
 configstore = ConfigStore.instance()
-configstore.store(name = 'TrainOneatConfig', node = TrainOneatConfig)
+configstore.store(name = 'OneatConfig', node = OneatConfig)
 
 @hydra.main(config_path = 'conf', config_name = 'config_oneat')
-def main( config : TrainOneatConfig):
+def main( config : OneatConfig):
     npz_directory = config.paths_oneat.npz_directory
     model_dir = config.paths_oneat.model_dir
     model_name = config.files_oneat.model_name

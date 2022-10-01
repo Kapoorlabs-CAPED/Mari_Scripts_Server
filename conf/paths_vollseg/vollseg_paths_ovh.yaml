@@ -2,3 +2,6 @@ star_model_dir:  '/mnt/WorkHorse/Mari_Models/StarDist3D/'
 unet_model_dir:  '/mnt/WorkHorse/Mari_Models/Unet3D/'
 roi_model_dir:  '/mnt/WorkHorse/Mari_Models/MASKUNET/'
 den_model_dir:  '/mnt/WorkHorse/Mari_Models/CARE/'
+
+predict_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/second_dataset/'
+save_dir: predict_image_dir + 'den/'

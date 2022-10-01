@@ -23,6 +23,13 @@ class Params:
         train_unet: bool 
         train_star: bool 
         train_loss: str
+        file_type: str
+        min_size: int 
+        min_size_mask: int 
+        max_size: int 
+        n_tiles: tuple 
+        axes: str
+        
     
 @dataclass
 class Paths: 
@@ -30,7 +37,26 @@ class Paths:
     unet_model_dir:  str
     roi_model_dir:  str
     den_model_dir:  str
+    predict_image_dir: str
+    save_dir: predict_image_dir + str 
 @dataclass
 class Files:  
     npz_filename: str
-    model_name: str       
+    star_model_name: str
+    unet_model_name: str
+    roi_model_name: str
+    den_model_name: str 
+    
+    
+@dataclass
+class  VollSegConfig:
+    
+      paths_vollseg: Paths
+      files_vollseg: Files 
+      params: Params 
+    
+        
+    
+
+
+  
