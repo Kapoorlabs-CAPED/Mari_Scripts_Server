@@ -1,0 +1,2 @@
+npz_filename: 'XenopusNucleiSeg'
+model_name: 'nuclei_xenopus_mari'

@@ -13,6 +13,6 @@ params:
     imagex: 64
     imagey: 64
 defaults:
-   - files: oneat_files_ovh
+   - files: oneat_files
    - paths: oneat_paths_ovh
    - _self_     

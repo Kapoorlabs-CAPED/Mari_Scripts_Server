@@ -22,7 +22,7 @@ params:
     train_loss: 'mae'
 
 defaults:
-   - files: vollseg_files_ovh
+   - files: vollseg_files
    - paths: vollseg_paths_ovh
    - _self_ 
        
