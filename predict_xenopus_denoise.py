@@ -17,13 +17,11 @@ configstore.store(name = 'VollSegConfig', node = VollSegConfig)
 def main( config : VollSegConfig):
 
                 image_dir = config.paths_vollseg.predict_image_dir
-                model_dir = config.paths_vollseg.den_model_dir
+                model_dir = config.paths_vollseg.model_dir
                 save_dir = config.paths_vollseg.save_dir
                 
                 noise_model_name = config.files_vollseg.den_model_name
                 noise_model = CARE(config = None, name = noise_model_name, basedir = model_dir)
-
-
                 Raw_path = os.path.join(image_dir, config.params.file_type)
                 filesRaw = glob.glob(Raw_path)
                 filesRaw.sort

@@ -26,6 +26,12 @@ params:
     max_size: 1000000
     n_tiles: (4,4,4)
     axes: 'ZYX'
+    dounet: False
+    seedpool: True 
+    slice_merge: False
+    UseProbability: True 
+    donormalize: True 
+    ExpandLabels: False
 
 defaults:
    - files_vollseg: vollseg_files

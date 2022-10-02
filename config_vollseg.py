@@ -29,10 +29,17 @@ class Params:
         max_size: int 
         n_tiles: tuple 
         axes: str
+        dounet: bool 
+        seedpool: bool  
+        slice_merge: bool
+        UseProbability: bool 
+        donormalize: bool 
+        ExpandLabels: bool
         
     
 @dataclass
 class Paths: 
+    model_dir: str 
     star_model_dir:  str
     unet_model_dir:  str
     roi_model_dir:  str
