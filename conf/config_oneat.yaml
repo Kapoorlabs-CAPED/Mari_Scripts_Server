@@ -31,6 +31,9 @@ params_predict:
           nms_function: 'iou'
           file_type: '*.tif'
           remove_markers: False
+          nms_space: 10
+          nms_time: 2
+          volume: True
 
 trainclass:
      #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 

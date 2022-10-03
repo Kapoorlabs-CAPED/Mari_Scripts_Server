@@ -33,6 +33,9 @@ class ParamsPredict:
      nms_function: str 
      file_type: str
      remove_markers: bool
+     nms_space: int 
+     nms_time: int
+     volume: bool
      
      
     
