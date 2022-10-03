@@ -17,7 +17,7 @@ params_train:
     imagez: 8
     nboxes: 1
     pure_lstm: False
-    
+
 
 
 params_predict:
@@ -30,6 +30,7 @@ params_predict:
           normalize: True
           nms_function: 'iou'
           file_type: '*.tif'
+          remove_markers: False
 
 trainclass:
      #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 

@@ -32,6 +32,7 @@ class ParamsPredict:
      normalize: bool 
      nms_function: str 
      file_type: str
+     remove_markers: bool
      
      
     

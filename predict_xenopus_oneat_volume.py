@@ -5,6 +5,7 @@ import glob
 from oneat.NEATModels import NEATVollNet, NEATTResNet, NEATLRNet
 from oneat.NEATUtils.utils import load_json
 from pathlib import Path
+from tifffile import imread
 import hydra
 from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
@@ -17,9 +18,6 @@ def main( config : OneatConfig):
           n_tiles = config.params_predict.n_tiles
           event_threshold = config.params_predict.event_threshold
           event_confidence = config.params_predict.event_confidence
-          downsamplefactor = config.params_predict.downsamplefactor
-          start_project_mid = config.params_predict.start_project_mid
-          end_project_mid = config.params_predict.end_project_mid
           normalize = config.params_predict.normalize
           nms_function = config.params_predict.nms_function
 
@@ -32,7 +30,7 @@ def main( config : OneatConfig):
           remove_markers = config.params_predict.remove_markers
           division_categories_json = model_dir + config.files_oneat.categories_json
           catconfig = load_json(division_categories_json)
-          division_cord_json = model_dir + config.files_oneat.lstm_cord_json
+          division_cord_json = model_dir + config.files_oneat.voll_cord_json
           cordconfig = load_json(division_cord_json)
           training_class = eval(config.trainclass.training_class)
           model = training_class(None, model_dir , model_name,catconfig, cordconfig)
@@ -41,11 +39,9 @@ def main( config : OneatConfig):
           X = glob.glob(Raw_path)
 
           for imagename in X:
-               print(imagename)   
+               print(imagename)  
                marker_tree =  model.get_markers(imagename, 
-                                                       segdir,
-                                                       start_project_mid = start_project_mid,
-                                                       end_project_mid = end_project_mid,  
+                                                       segdir
                                                        )
 
                                              
@@ -57,11 +53,8 @@ def main( config : OneatConfig):
                                    marker_tree = marker_tree, 
                                    remove_markers = remove_markers,
                                    nms_function = nms_function,
-                                   downsamplefactor = downsamplefactor,
-                                   start_project_mid = start_project_mid,
-                                   end_project_mid = end_project_mid,
                                    normalize = normalize)
                
-if __name__=='__main__':
-     main()               
-
+               
+if __name__=="__main__":
+     main()
