@@ -65,6 +65,9 @@ class Paths:
     train_seg_image_dir: str
     train_csv_dir: str
     train_save_dir: str  
+    train_basic_image_dir: str 
+    train_basic_seg_image_dir: str
+    train_basic_csv_dir: str
         
     
 @dataclass 

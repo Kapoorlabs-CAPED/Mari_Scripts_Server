@@ -9,3 +9,7 @@ train_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_dia
 train_seg_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
 train_csv_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv_aug/'
 train_save_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
+
+train_basic_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw/'
+train_basic_seg_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg/'
+train_basic_csv_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv/'

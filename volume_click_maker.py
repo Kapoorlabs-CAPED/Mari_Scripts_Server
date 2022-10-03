@@ -17,6 +17,12 @@ app = QApplication([])
 
 
 
+import hydra
+from config_oneat import OneatConfig
+from hydra.core.config_store import ConfigStore
+
+configstore = ConfigStore.instance()
+configstore.store(name = 'OneatConfig', node = OneatConfig)
 
 
 class EventViewer(object):
@@ -81,17 +87,17 @@ class EventViewer(object):
 
                 
 
-def main():
+def main(config : OneatConfig):
 
-   sourcedir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw/'
-   csv_dir = '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv/'
+   sourcedir = config.paths_oneat.train_basic_image_dir
+   csv_dir = config.paths_oneat.train_basic_csv_dir
    Imageids = []
    Boxname = 'ImageIDBox'
    Path(csv_dir).mkdir(exist_ok = True)
 
 
 
-   Raw_path = os.path.join(sourcedir, '*tif')
+   Raw_path = os.path.join(sourcedir, config.params_predict.file_type)
    X = glob.glob(Raw_path)
    for imagename in X:
          Imageids.append(imagename)
