@@ -4,7 +4,7 @@
 
 
 from pathlib import Path
-from oneat_augmentations import TemporalZAug
+from oneat_augmentations import AugmentTZYXCsv
 import os
 from tifffile import imread, imwrite
 import numpy as np
@@ -79,7 +79,7 @@ def main( config : OneatConfig):
                                     #Rotate
                                     for rotate_angle in rotation_angles:
                                             
-                                            rotate_pixels = TemporalZAug(rotate_angle = rotate_angle)
+                                            rotate_pixels = AugmentTZYXCsv(rotate_angle = rotate_angle)
 
                                             aug_rotate_pixels,aug_rotate_pixels_label, aug_rotate_pixels_csv  = rotate_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                                             
@@ -101,7 +101,7 @@ def main( config : OneatConfig):
                                 classfound = (Csvname == csv_name_diff +  event_name + name)   
                                 if classfound: 
                                     #Additive Noise
-                                    addnoise_pixels = TemporalZAug(mean = mean, sigma = sigma, distribution = distribution)
+                                    addnoise_pixels = AugmentTZYXCsv(mean = mean, sigma = sigma, distribution = distribution)
 
                                     aug_addnoise_pixels,aug_addnoise_pixels_label, aug_addnoise_pixels_csv  = addnoise_pixels.build(image = np.copy(image), labelimage = segimage, labelcsv = csvfname)
                                     

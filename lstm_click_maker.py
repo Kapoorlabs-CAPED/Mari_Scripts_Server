@@ -16,6 +16,12 @@ from qtpy.QtWidgets import QApplication
 app = QApplication([])
 
 
+import hydra
+from config_oneat import OneatConfig
+from hydra.core.config_store import ConfigStore
+
+configstore = ConfigStore.instance()
+configstore.store(name = 'OneatConfig', node = OneatConfig)
 
 
 def MidSlices(Image, start_project_mid, end_project_mid, axis = 1):
@@ -90,17 +96,17 @@ class EventViewer(object):
 
                 
 
-def main():
+def main(config : OneatConfig):
 
-   sourcedir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_raw/'
-   csv_dir = '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_new_csv/'
+   sourcedir = config.paths_oneat.train_basic_image_dir
+   csv_dir = config.paths_oneat.train_basic_csv_dir
    Imageids = []
    Boxname = 'ImageIDBox'
    Path(csv_dir).mkdir(exist_ok = True)
 
 
 
-   Raw_path = os.path.join(sourcedir, '*tif')
+   Raw_path = os.path.join(sourcedir, config.params_predict.file_type)
    X = glob.glob(Raw_path)
    for imagename in X:
          Imageids.append(imagename)
