@@ -1,2 +1,6 @@
 model_dir:  '/mnt/WorkHorse/Mari_Models/Oneat/'
 npz_directory: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
+
+imagedir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
+segdir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
+savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_lstm_d38_f48/'

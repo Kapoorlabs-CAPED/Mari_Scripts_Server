@@ -28,30 +28,30 @@ def main( config : OneatConfig):
 
 
     #Number of starting convolutional filters, is doubled down with increasing depth
-    startfilter = config.params.startfilter
+    startfilter = config.params_train.startfilter
     #CNN network start layer, mid layers and lstm layer kernel size
-    start_kernel = config.params.start_kernel
-    mid_kernel = config.params.mid_kernel
+    start_kernel = config.params_train.start_kernel
+    mid_kernel = config.params_train.mid_kernel
     #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
-    depth = config.params.depth
+    depth = config.params_train.depth
     #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
-    learning_rate = config.params.learning_rate
+    learning_rate = config.params_train.learning_rate
     #For stochastic gradient decent, the batch size used for computing the gradients
-    batch_size = config.params.batch_size
+    batch_size = config.params_train.batch_size
     #Training epochs, longer the better with proper chosen learning rate
-    epochs = config.params.epochs
-    nboxes = config.params.nboxes
+    epochs = config.params_train.epochs
+    nboxes = config.params_train.nboxes
     #The inbuilt model stride which is equal to the nulber of times image was downsampled by the network
-    show = config.params.show
-    stage_number = config.params.stage_number
-    size_tminus = config.params.size_tminus
-    size_tplus = config.params.size_tplus
-    imagex = config.params.imagex
-    imagey = config.params.imagey
-    imagez = config.params.imagez
+    show = config.params_train.show
+    stage_number = config.params_train.stage_number
+    size_tminus = config.params_train.size_tminus
+    size_tplus = config.params_train.size_tplus
+    imagex = config.params_train.imagex
+    imagey = config.params_train.imagey
+    imagez = config.params_train.imagez
     trainclass = eval(config.trainclass.training_class)
     trainconfig = eval(config.trainclass.training_config)
-    pure_lstm = config.params.pure_lstm 
+    pure_lstm = config.params_train.pure_lstm 
     config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,

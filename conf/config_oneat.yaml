@@ -1,6 +1,6 @@
 
 
-params:
+params_train:
     startfilter: 48
     start_kernel: 7
     mid_kernel: 3
@@ -17,7 +17,19 @@ params:
     imagez: 8
     nboxes: 1
     pure_lstm: False
-    cord_json: 'Cellsplitdiamondcordxenopus.json'
+    
+
+
+params_predict:
+          n_tiles: (1,1,1)
+          event_threshold: 0.9999
+          event_confidence: 0.9
+          downsamplefactor: 1
+          start_project_mid: 4
+          end_project_mid: 1
+          normalize: True
+          nms_function: 'iou'
+          file_type: '*.tif'
 
 trainclass:
      #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 
