@@ -1,0 +1,8 @@
+outputs
+.ipynb_checkpoints
+.vscode
+._*
+__pycache__/
+eggs/
+.eggs/
+Icon
