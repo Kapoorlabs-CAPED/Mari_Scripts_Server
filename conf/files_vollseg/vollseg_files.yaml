@@ -1,4 +1,5 @@
 npz_filename: 'XenopusNucleiSeg'
+model_name: 'nuclei_xenopus_mari'
 star_model_name: 'Star3D/nuclei_xenopus_mari'
 unet_model_name: 'Unet3D/unet_nuclei_xenopus_mari'
 roi_model_name: 'MASKUNET/roi_nuclei_xenopus'

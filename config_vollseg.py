@@ -14,6 +14,7 @@ class Params:
         n_patches_per_image: int 
         n_rays: int 
         startfilter: int 
+        erosion_iterations: int
         use_gpu_opencl: bool 
         generate_npz: bool 
         backbone: str 
@@ -46,13 +47,20 @@ class Paths:
     den_model_dir:  str
     predict_image_dir: str
     save_dir: predict_image_dir + str 
+    base_dir: str
+    raw_dir: str
+    real_mask_dir: str
+    binary_mask_dir: str
+    
 @dataclass
 class Files:  
     npz_filename: str
+    model_name: str 
     star_model_name: str
     unet_model_name: str
     roi_model_name: str
     den_model_name: str 
+    
     
     
 @dataclass

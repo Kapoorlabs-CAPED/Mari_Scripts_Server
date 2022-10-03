@@ -11,6 +11,7 @@ params:
     n_patches_per_image: 32
     n_rays: 96
     startfilter: 32
+    erosion_iterations: 0
     use_gpu_opencl: False
     generate_npz: False
     backbone: 'unet'

@@ -4,5 +4,10 @@ unet_model_dir:  model_dir + 'Unet3D/'
 roi_model_dir:  model_dir + 'MASKUNET/'
 den_model_dir:  model_dir +'CARE/'
 
+base_dir: '/mnt/WorkHorse/Mari_Data_Training/segmentation_training/'
+raw_dir: 'raw/'
+real_mask_dir: 'real_mask/'
+binary_mask_dir: 'binary_mask/'
+
 predict_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/second_dataset/'
 save_dir: predict_image_dir + 'den/'
