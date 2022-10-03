@@ -18,6 +18,7 @@ class ParamsTrain:
     imagez: int
     nboxes: int
     pure_lstm: bool
+    normalizeimage: bool
 
 
 
@@ -59,7 +60,12 @@ class Paths:
     npz_directory : str   
     imagedir: str
     segdir: str
-    savedir: str    
+    savedir: str 
+    train_image_dir: str
+    train_seg_image_dir: str
+    train_csv_dir: str
+    train_save_dir: str  
+        
     
 @dataclass 
 class OneatConfig:

@@ -17,6 +17,7 @@ params_train:
     imagez: 8
     nboxes: 1
     pure_lstm: False
+    normalizeimage: True
 
 
 
