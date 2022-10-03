@@ -20,8 +20,10 @@ params:
     cord_json: 'Cellsplitdiamondcordxenopus.json'
 
 trainclass:
-     training_class: NEATEynamic
-     training_config: diamond_config
+     #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 
+     training_class: NEATVollNet
+     # volume_config, lstm_config
+     training_config: volume_config
 
 defaults:
    - files_oneat: oneat_files

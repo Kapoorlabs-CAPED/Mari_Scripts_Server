@@ -3,8 +3,8 @@
 
 import os
 
-from oneat.NEATModels import NEATCynamic, NEATDynamic, NEATEynamic, NEATLDynamic, NEATSDynamic, NEATFocus, NEATSynamic
-from oneat.NEATModels.config import diamond_config, dynamic_config
+from oneat.NEATModels import NEATVollNet, NEATTResNet, NEATLRNet
+from oneat.NEATModels.config import volume_config, lstm_config
 from oneat.NEATUtils.utils import save_json, load_json
 import hydra
 from config_oneat import OneatConfig
