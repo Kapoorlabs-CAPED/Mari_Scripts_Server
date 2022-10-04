@@ -9,7 +9,7 @@ from oneat.NEATUtils.utils import save_json, load_json
 import hydra
 from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
-
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 configstore = ConfigStore.instance()
 configstore.store(name = 'OneatConfig', node = OneatConfig)
 
