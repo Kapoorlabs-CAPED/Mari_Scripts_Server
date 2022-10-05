@@ -44,15 +44,16 @@ class ParamsPredict:
 class Trainclass:
     training_class : type    
     training_config : type
+    cord_json: str
+    categories_json: str
     
 @dataclass
 class Files:
     npz_name: str
     npz_val_name: str
     model_name: str
-    categories_json: str
-    voll_cord_json: str
-    lstm_cord_json: str
+    
+    
     
 @dataclass
 class Paths:

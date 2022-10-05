@@ -41,6 +41,9 @@ trainclass:
      training_class: NEATVollNet
      # volume_config, lstm_config
      training_config: volume_config
+     # Cellsplitdiamondcordxenopus.json, Cellsplitcordxenopus.json
+     cord_json: 'Cellsplitdiamondcordxenopus.json'
+     categories_json: 'Cellsplitcategoriesxenopus.json'
 
 defaults:
    - files_oneat: oneat_files

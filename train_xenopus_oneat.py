@@ -21,9 +21,9 @@ def main( config : OneatConfig):
     npz_name = config.files_oneat.npz_name
     npz_val_name = config.files_oneat.npz_val_name
     #Neural network parameters
-    division_categories_json = model_dir + config.files_oneat.categories_json
+    division_categories_json = model_dir + config.trainclass.categories_json
     key_categories = load_json(division_categories_json)
-    division_cord_json = model_dir + config.files_oneat.voll_cord_json
+    division_cord_json = model_dir + config.trainclass.cord_json
     key_cord = load_json(division_cord_json)
 
 
