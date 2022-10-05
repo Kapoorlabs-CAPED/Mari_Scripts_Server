@@ -8,8 +8,8 @@ savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_lst
 activation_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps/'
 metrics_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/gt/'
-metrics_csv_dir: '/mnt/WorkHorse/Mari_Data_Oneat/oneat_metrics/gt/'
-
+metrics_gt_csv_dir: '/mnt/WorkHorse/Mari_Data_Oneat/oneat_metrics/gt/'
+metrics_supress_csv_dir: '/mnt/WorkHorse/Mari_Data_Oneat/oneat_metrics/gt/supress_csv_dir/'
 
 train_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
 train_seg_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
