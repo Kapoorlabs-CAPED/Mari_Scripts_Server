@@ -1,12 +1,12 @@
 
 
 params_train:
-    startfilter: 48
+    startfilter: 64
     start_kernel: 7
     mid_kernel: 3
-    depth: 56
+    depth: 101
     learning_rate: 1.0E-3
-    batch_size: 20
+    batch_size: 2
     epochs: 250
     show: False
     stage_number: 3
@@ -47,5 +47,5 @@ trainclass:
 
 defaults:
    - files_oneat: oneat_files
-   - paths_oneat: oneat_paths_ovh
+   - paths_oneat: oneat_paths_aws
    - _self_     
