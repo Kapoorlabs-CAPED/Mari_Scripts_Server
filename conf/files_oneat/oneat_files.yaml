@@ -1,6 +1,6 @@
 npz_name: 'Xenopus_oneat_training_m1p1_diamond.npz'
 npz_val_name: 'Xenopus_oneat_training_m1p1_diamondval.npz'
-model_name: 'Cellsplitdetectorxenopusvolumecnn_d29_f16.h5'
+model_name: 'Cellsplitdetectorxenopusvolumecnn_d101_f16'
 gt_image: 'tracks_gt_star.tif'
 gt_seg_image: 'tracks_gt_star.tif'
 gt_csv: 'gt_mitosis_locations.csv'
