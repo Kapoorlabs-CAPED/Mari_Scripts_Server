@@ -40,9 +40,7 @@ def main( config : OneatConfig):
 
           for imagename in X:
                print(imagename)  
-               marker_tree =  model.get_markers(imagename, 
-                                                       segdir
-                                                       )
+               marker_tree =  model.get_markers(imagename,segdir)
 
                                              
                model.predict(imagename,
