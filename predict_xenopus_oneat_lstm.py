@@ -30,9 +30,9 @@ def main( config : OneatConfig):
           model_name = config.files_oneat.model_name
 
           remove_markers = config.params_predict.remove_markers
-          division_categories_json = model_dir + config.files_oneat.categories_json
+          division_categories_json = model_dir + config.trainclass.categories_json
           catconfig = load_json(division_categories_json)
-          division_cord_json = model_dir + config.files_oneat.lstm_cord_json
+          division_cord_json = model_dir + config.trainclass.cord_json
           cordconfig = load_json(division_cord_json)
           training_class = eval(config.trainclass.training_class)
           model = training_class(None, model_dir , model_name,catconfig, cordconfig)
