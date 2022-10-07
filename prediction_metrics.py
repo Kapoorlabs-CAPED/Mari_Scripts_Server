@@ -1,8 +1,5 @@
-import os
-from pathlib import Path
 import hydra
-from sklearn import metrics
-from caped_ai_metrics import ScoreKeeper
+from caped_ai_metrics import ClassificationScore
 from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
 
@@ -12,8 +9,6 @@ configstore.store(name = 'OneatConfig', node = OneatConfig)
 @hydra.main(config_path = 'conf', config_name = 'config_oneat')
 def main(config : OneatConfig):
     
-    image_dir = config.paths_oneat.metrics_image_dir
-    
     seg_image_dir = config.paths_oneat.metrics_seg_dir
     gt_seg_image = config.files_oneat.gt_seg_image
 
@@ -21,10 +16,10 @@ def main(config : OneatConfig):
     gt_csv_dir = config.paths_oneat.metrics_gt_csv_dir
     gt_csv_file = config.files_oneat.gt_csv   
     
-
     groundtruth = gt_csv_dir + gt_csv_file
+    seg_image = seg_image_dir + gt_seg_image
     
-    compute_score = ScoreKeeper.ClassificationScore(predictions_dir, groundtruth, gt_seg_image)
+    compute_score = ClassificationScore(predictions_dir, groundtruth, seg_image)
     compute_score.model_scorer()
 
 if __name__=='__main__':
