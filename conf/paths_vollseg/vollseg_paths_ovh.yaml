@@ -9,5 +9,6 @@ raw_dir: 'raw/'
 real_mask_dir: 'real_mask/'
 binary_mask_dir: 'binary_mask/'
 
-predict_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/second_dataset/'
-save_dir: predict_image_dir + 'den/'
+predict_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps/'
+save_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps_seg/'
+
