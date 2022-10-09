@@ -20,7 +20,7 @@ def main( config : OneatConfig):
           event_confidence = config.params_predict.event_confidence
           normalize = config.params_predict.normalize
           nms_function = config.params_predict.nms_function
-
+          print(n_tiles)  
           imagedir = config.paths_oneat.imagedir
           segdir = config.paths_oneat.segdir
           model_dir = config.paths_oneat.model_dir

@@ -24,7 +24,7 @@ class ParamsTrain:
 
 @dataclass 
 class ParamsPredict:
-     n_tiles: tuple
+     n_tiles: tuple[int] 
      event_threshold: float
      event_confidence: float 
      downsamplefactor: int 

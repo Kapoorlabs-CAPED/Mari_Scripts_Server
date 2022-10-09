@@ -22,7 +22,7 @@ params_train:
 
 
 params_predict:
-          n_tiles: (1,1,1)
+          n_tiles: [1,1,1]
           event_threshold: 0.9999
           event_confidence: 0.9
           downsamplefactor: 1
