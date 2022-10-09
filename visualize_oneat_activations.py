@@ -20,11 +20,7 @@ def main( config : OneatConfig):
         model_name = config.files_oneat.model_name
         categories_json = model_dir + config.trainclass.categories_json
         cord_json = model_dir + config.trainclass.cord_json
-        fileextension = config.params_predict.file_type
-        event_threshold = config.params_predict.event_threshold
-        nms_space = config.params_predict.nms_space
-        nms_time = config.params_predict.nms_time
-        volume = config.params_predict.volume 
+        
         catconfig = load_json(categories_json)
         cordconfig = load_json(cord_json)
         imagename = imagedir[0]
