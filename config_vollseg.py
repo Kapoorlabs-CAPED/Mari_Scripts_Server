@@ -46,7 +46,7 @@ class Paths:
     roi_model_dir:  str
     den_model_dir:  str
     predict_image_dir: str
-    save_dir: predict_image_dir + str 
+    save_dir: str 
     base_dir: str
     raw_dir: str
     real_mask_dir: str
