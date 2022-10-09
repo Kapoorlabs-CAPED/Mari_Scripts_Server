@@ -72,6 +72,7 @@ class Paths:
     train_basic_seg_image_dir: str
     train_basic_csv_dir: str
     activation_image_dir: str 
+    activation_seg_dir: str
     metrics_image_dir: str
     metrics_seg_dir: str
     metrics_gt_csv_dir: str 
