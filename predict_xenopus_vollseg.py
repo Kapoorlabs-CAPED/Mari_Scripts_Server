@@ -31,6 +31,7 @@ def main( config : VollSegConfig):
                 Raw_path = os.path.join(image_dir, config.params.file_type)
                 filesRaw = glob.glob(Raw_path)
                 filesRaw.sort
+               
                 min_size = config.params.min_size
                 min_size_mask = config.params.min_size_mask
                 max_size = config.params.max_size
@@ -62,4 +63,7 @@ def main( config : VollSegConfig):
                                         UseProbability = UseProbability, 
                                         save_dir = save_dir, 
                                         Name = Name,
-                                        dounet = dounet)    
+                                        dounet = dounet)   
+                                        
+if __name__=='__main__':
+     main()                                         
