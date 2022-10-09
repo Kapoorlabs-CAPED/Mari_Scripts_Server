@@ -6,6 +6,7 @@ segdir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/gt/'
 savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_vol_d101_f16/'
 
 activation_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps/'
+activation_seg_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps_seg/'
 metrics_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/gt/'
 metrics_gt_csv_dir: '/mnt/WorkHorse/Mari_Data_Oneat/oneat_metrics/gt/'
