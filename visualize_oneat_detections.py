@@ -17,7 +17,7 @@ def main( config : OneatConfig):
         csvdir = config.paths_oneat.savedir
         model_dir = config.paths_oneat.model_dir
         savedir = config.paths_oneat.savedir + 'Clean_CSV/' 
-        categories_json = model_dir + config.files_oneat.categories_json
+        categories_json = model_dir + config.trainclass.categories_json
         fileextension = config.params_predict.file_type
         event_threshold = config.params_predict.event_threshold
         nms_space = config.params_predict.nms_space

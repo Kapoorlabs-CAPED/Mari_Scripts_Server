@@ -25,7 +25,8 @@ def main( config : OneatConfig):
     key_categories = load_json(division_categories_json)
     division_cord_json = model_dir + config.trainclass.cord_json
     key_cord = load_json(division_cord_json)
-
+    catconfig = load_json(division_categories_json)
+    cordconfig = load_json(division_cord_json)
 
     #Number of starting convolutional filters, is doubled down with increasing depth
     startfilter = config.params_train.startfilter
@@ -52,6 +53,7 @@ def main( config : OneatConfig):
     trainclass = eval(config.trainclass.training_class)
     trainconfig = eval(config.trainclass.training_config)
     pure_lstm = config.params_train.pure_lstm 
+    
     config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
@@ -62,7 +64,7 @@ def main( config : OneatConfig):
     print(config)
     save_json(config_json, model_dir + os.path.splitext(model_name)[0] + '_Parameter.json')
 
-    Train = trainclass(config, model_dir, model_name)
+    Train = trainclass(config, model_dir, model_name, catconfig, cordconfig)
     Train.loadData()
     Train.TrainModel()
 
