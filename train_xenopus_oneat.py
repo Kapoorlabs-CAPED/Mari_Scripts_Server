@@ -17,7 +17,6 @@ configstore.store(name = 'OneatConfig', node = OneatConfig)
 def main( config : OneatConfig):
     npz_directory = config.paths_oneat.npz_directory
     model_dir = config.paths_oneat.model_dir
-    model_name = config.files_oneat.model_name
     npz_name = config.files_oneat.npz_name
     npz_val_name = config.files_oneat.npz_val_name
     #Neural network parameters
@@ -57,13 +56,13 @@ def main( config : OneatConfig):
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
                             depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
-                            show = show,startfilter = startfilter, batch_size = batch_size, model_name = model_name)
+                            show = show,startfilter = startfilter, batch_size = batch_size)
 
     config_json = config.to_json()
     print(config)
     save_json(config_json, model_dir + '/' + 'parameters.json')
 
-    Train = trainclass(config, model_dir, model_name, key_categories, key_cord)
+    Train = trainclass(config, model_dir, key_categories, key_cord)
     Train.loadData()
     Train.TrainModel()
 

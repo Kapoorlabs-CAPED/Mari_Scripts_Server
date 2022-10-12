@@ -1,6 +1,5 @@
 npz_name: 'oneat_xenopus_volumetric.npz'
 npz_val_name: 'oneat_xenopus_volumetric_val.npz'
-model_name: 'oneat_xenopus_volumetric'
 gt_image: 'tracks_gt_star.tif'
 gt_seg_image: 'tracks_gt_star.tif'
 gt_csv: 'gt_mitosis_locations.csv'
