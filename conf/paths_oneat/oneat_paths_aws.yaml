@@ -1,4 +1,4 @@
-model_dir:  '/home/ubuntu/WorkHorse/Mari_Models/Oneat/'
+model_dir:  '/home/ubuntu/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
 npz_directory: '/home/ubuntu/WorkHorse/'
 
 imagedir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
