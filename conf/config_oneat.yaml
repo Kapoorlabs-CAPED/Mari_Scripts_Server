@@ -6,7 +6,7 @@ params_train:
     mid_kernel: 3
     depth: 101
     learning_rate: 1.0E-3
-    batch_size: 10
+    batch_size: 5
     epochs: 250
     show: False
     stage_number: 3
