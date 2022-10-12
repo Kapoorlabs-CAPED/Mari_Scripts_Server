@@ -21,12 +21,11 @@ def main( config : OneatConfig):
     npz_name = config.files_oneat.npz_name
     npz_val_name = config.files_oneat.npz_val_name
     #Neural network parameters
-    division_categories_json = model_dir + config.trainclass.categories_json
+    division_categories_json = model_dir + '/' + config.trainclass.categories_json
     key_categories = load_json(division_categories_json)
-    division_cord_json = model_dir + config.trainclass.cord_json
+    
+    division_cord_json = model_dir + '/' + config.trainclass.cord_json
     key_cord = load_json(division_cord_json)
-    catconfig = load_json(division_categories_json)
-    cordconfig = load_json(division_cord_json)
 
     #Number of starting convolutional filters, is doubled down with increasing depth
     startfilter = config.params_train.startfilter
@@ -62,9 +61,9 @@ def main( config : OneatConfig):
 
     config_json = config.to_json()
     print(config)
-    save_json(config_json, model_dir + os.path.splitext(model_name)[0] + '_Parameter.json')
+    save_json(config_json, model_dir + '/' + 'parameters.json')
 
-    Train = trainclass(config, model_dir, model_name, catconfig, cordconfig)
+    Train = trainclass(config, model_dir, model_name, key_categories, key_cord)
     Train.loadData()
     Train.TrainModel()
 

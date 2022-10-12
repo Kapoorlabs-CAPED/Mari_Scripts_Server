@@ -1,12 +1,8 @@
 
-
-
-import numpy as np
 from oneat.NEATUtils import MovieCreator
 from oneat.NEATUtils.utils import save_json
 from oneat.NEATModels.TrainConfig import TrainConfig
 from pathlib import Path
-
 import hydra
 from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
@@ -30,8 +26,6 @@ def main( config : OneatConfig):
         train_save_dir = config.paths_oneat.train_save_dir
         Path(model_dir).mkdir(exist_ok = True)
         Path(train_save_dir).mkdir(exist_ok = True)
-
-
 
 
         #Name of the  events
@@ -58,9 +52,9 @@ def main( config : OneatConfig):
 
         dynamic_json, dynamic_cord_json = dynamic_config.to_json()
 
-        save_json(dynamic_json, model_dir + config.files_oneat.categories_json + '.json')
+        save_json(dynamic_json, model_dir + '/' + config.trainclass.categories_json + '.json')
 
-        save_json(dynamic_cord_json, model_dir + config.files_oneat.voll_cord_json + '.json')        
+        save_json(dynamic_cord_json, model_dir + '/' + config.trainclass.cord_json + '.json')        
 
 
 
