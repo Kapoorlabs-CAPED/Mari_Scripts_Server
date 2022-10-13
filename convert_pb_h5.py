@@ -6,14 +6,14 @@ from tensorflow.keras.models import save_model
 import os
 from oneat.NEATUtils.utils import load_json
 
-pb_model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/Cellsplitdetectorxenopusvolumecnn_d29_f64/'
-h5_model = '/mnt/WorkHorse/Mari_Models/Oneat/Cellsplitdetectorxenopusvolumecnn_d29_f64.h5'
+pb_model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
+h5_model = '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/weights.h5'
 
-model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/'
-model_name = 'Cellsplitdetectorxenopusvolumecnn_d29_f64'
-division_categories_json = model_dir + 'Cellsplitcategoriesxenopus.json'
+
+
+division_categories_json = pb_model_dir + 'catagories.json'
 catconfig = load_json(division_categories_json)
-config = load_json(os.path.join(model_dir, model_name) + '_Parameter.json')
+config = load_json(os.path.join(pb_model_dir, 'parameters.json'))
 
             
 box_vector = config['box_vector']

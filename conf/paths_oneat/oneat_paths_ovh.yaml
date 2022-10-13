@@ -1,9 +1,9 @@
-model_dir:  '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
+model_dir:  '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric_d101_f16/'
 npz_directory: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/'
 
 imagedir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segdir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/gt/'
-savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d29_f16/'
+savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_volumecnn_d101_f16/'
 
 activation_image_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps/'
 activation_seg_dir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps_seg/'

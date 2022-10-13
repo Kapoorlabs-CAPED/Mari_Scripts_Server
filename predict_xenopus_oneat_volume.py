@@ -20,12 +20,12 @@ def main( config : OneatConfig):
           event_confidence = config.params_predict.event_confidence
           normalize = config.params_predict.normalize
           nms_function = config.params_predict.nms_function
-          print(n_tiles)  
+          
           imagedir = config.paths_oneat.imagedir
           segdir = config.paths_oneat.segdir
           model_dir = config.paths_oneat.model_dir
           savedir= config.paths_oneat.savedir
-          model_name = config.files_oneat.model_name
+          
 
           remove_markers = config.params_predict.remove_markers
           division_categories_json = model_dir + config.trainclass.categories_json
@@ -33,7 +33,7 @@ def main( config : OneatConfig):
           division_cord_json = model_dir + config.trainclass.cord_json
           cordconfig = load_json(division_cord_json)
           training_class = eval(config.trainclass.training_class)
-          model = training_class(None, model_dir , model_name,catconfig, cordconfig)
+          model = training_class(None, model_dir, catconfig, cordconfig)
           Path(savedir).mkdir(exist_ok=True)
           Raw_path = os.path.join(imagedir, config.params_predict.file_type)
           X = glob.glob(Raw_path)

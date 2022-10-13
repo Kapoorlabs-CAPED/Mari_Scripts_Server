@@ -17,9 +17,10 @@ def main(config : OneatConfig):
     gt_csv_file = config.files_oneat.gt_csv   
     
     groundtruth = gt_csv_dir + gt_csv_file
-    seg_image = seg_image_dir + gt_seg_image
+    segimage = seg_image_dir + gt_seg_image
     
-    compute_score = ClassificationScore(predictions_dir, groundtruth, seg_image)
+    thresholdscore = 0.99999
+    compute_score = ClassificationScore(predictions_dir, groundtruth, segimage = segimage, thresholdspace = 20, thresholdtime = 8, thresholdscore = thresholdscore, metric = 'Euclid')
     compute_score.model_scorer()
 
 if __name__=='__main__':
