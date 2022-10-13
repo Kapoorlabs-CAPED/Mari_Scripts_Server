@@ -15,9 +15,7 @@ configstore.store(name = 'OneatConfig', node = OneatConfig)
 def main( config : OneatConfig):
         imagedir = list(Path(config.paths_oneat.activation_image_dir).glob(config.params_predict.file_type))
         segimagedir = config.paths_oneat.activation_seg_dir
-        csvdir = config.paths_oneat.savedir + 'Clean_CSV/' 
         model_dir = config.paths_oneat.model_dir
-        model_name = config.files_oneat.model_name
         categories_json = model_dir + config.trainclass.categories_json
         cord_json = model_dir + config.trainclass.cord_json
         
@@ -27,7 +25,6 @@ def main( config : OneatConfig):
         visualize_point = 5
         activations = visualize_activations(catconfig,cordconfig,
                               model_dir,
-                              model_name,
                               imagename,
                               segimagedir,
                               visualize_point = visualize_point,
