@@ -24,11 +24,13 @@ def main( config : OneatConfig):
         catconfig = load_json(categories_json)
         cordconfig = load_json(cord_json)
         imagename = imagedir[0]
+        visualize_point = 5
         activations = visualize_activations(catconfig,cordconfig,
                               model_dir,
                               model_name,
                               imagename,
                               segimagedir,
+                              visualize_point = visualize_point,
                               oneat_vollnet = True)
         activations.VizualizeActivations()
 
