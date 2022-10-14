@@ -25,7 +25,7 @@ def main( config : OneatConfig):
         cordconfig = load_json(cord_json)
         imagename = imagedir[0]
         image = imread(imagename)
-        segimage = os.path.join(segimagedir, Path(imagename).name)
+        segimage = imread(os.path.join(segimagedir, Path(imagename).name))
         visualize_point = 5
         activations = visualize_activations(catconfig,cordconfig,
                               model_dir,
