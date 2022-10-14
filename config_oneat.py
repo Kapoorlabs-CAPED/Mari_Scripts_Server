@@ -27,7 +27,6 @@ class ParamsPredict:
      n_tiles: tuple[int] 
      event_threshold: float
      event_confidence: float 
-     downsamplefactor: int 
      start_project_mid: int 
      end_project_mid: int 
      normalize: bool 

@@ -9,7 +9,7 @@ from tifffile import imread
 import hydra
 from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
-
+import numpy as np
 configstore = ConfigStore.instance()
 configstore.store(name = 'OneatConfig', node = OneatConfig)
 
@@ -39,19 +39,19 @@ def main( config : OneatConfig):
           X = glob.glob(Raw_path)
 
           for imagename in X:
-               print(imagename)  
-               marker_tree =  model.get_markers(imagename,segdir)
-
+               image = imread(imagename).astype(np.uint8)
+               segimage = os.path.join(segdir, Path(imagename).name)  
+               marker_tree =  model.get_markers(segimage)
                                              
-               model.predict(imagename,
-                                   savedir, 
-                                   n_tiles = n_tiles, 
-                                   event_threshold = event_threshold, 
-                                   event_confidence = event_confidence,
-                                   marker_tree = marker_tree, 
-                                   remove_markers = remove_markers,
-                                   nms_function = nms_function,
-                                   normalize = normalize)
+               model.predict(image,
+                             savedir, 
+                             n_tiles = n_tiles, 
+                             event_threshold = event_threshold, 
+                             event_confidence = event_confidence,
+                             marker_tree = marker_tree, 
+                             remove_markers = remove_markers,
+                             nms_function = nms_function,
+                             normalize = normalize)
                
                
 if __name__=="__main__":

@@ -25,7 +25,6 @@ params_predict:
           n_tiles: [1,1,1]
           event_threshold: 0.9999
           event_confidence: 0.9
-          downsamplefactor: 1
           start_project_mid: 4
           end_project_mid: 1
           normalize: True
@@ -35,6 +34,7 @@ params_predict:
           nms_space: 10
           nms_time: 2
           volume: True
+          
 
 trainclass:
      #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 
