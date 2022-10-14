@@ -42,7 +42,7 @@ def main( config : OneatConfig):
 
           for imagename in X:
                image = imread(imagename).astype(np.uint8)
-               segimage = os.path.join(segdir, Path(imagename).name)  
+               segimage = imread(os.path.join(segdir, Path(imagename).name))  
                marker_tree =  model.get_markers(segimage,
                                                 start_project_mid = start_project_mid,
                                                 end_project_mid = end_project_mid,  

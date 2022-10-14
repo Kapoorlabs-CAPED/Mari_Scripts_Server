@@ -26,7 +26,7 @@ def main( config : OneatConfig):
         imagename = imagedir[0]
         image = imread(imagename)
         segimage = os.path.join(segimagedir, Path(imagename).name)
-        visualize_point = 5
+        visualize_point = 8
         activations = visualize_activations(catconfig,cordconfig,
                               model_dir,
                               image,
