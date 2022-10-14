@@ -8,8 +8,8 @@ from config_oneat import OneatConfig
 from hydra.core.config_store import ConfigStore
 from oneat.NEATUtils.utils import load_json
 from pathlib import Path 
-from tifffile import imread
 import os
+from tifffile import imread
 configstore = ConfigStore.instance()
 configstore.store(name = 'OneatConfig', node = OneatConfig)
 
@@ -33,7 +33,7 @@ def main( config : OneatConfig):
                               segimage = segimage,
                               visualize_point = visualize_point,
                               oneat_vollnet = True)
-        activations.VizualizeActivations()
+        activations.VizualizePredictionsActivations()
 
 
 if __name__=='__main__':
