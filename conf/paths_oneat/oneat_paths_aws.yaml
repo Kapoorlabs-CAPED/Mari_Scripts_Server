@@ -1,6 +1,5 @@
 model_dir:  '/home/ubuntu/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
+imagedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/raw/third_dataset/'
+segdir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/seg/third_dataset/'
+savedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'
 npz_directory: '/home/ubuntu/WorkHorse/'
-
-imagedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/raw/gt/'
-segdir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/seg/'
-savedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt/'
