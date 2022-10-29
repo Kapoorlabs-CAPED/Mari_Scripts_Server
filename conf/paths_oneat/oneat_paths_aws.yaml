@@ -1,15 +1,6 @@
 model_dir:  '/home/ubuntu/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
 npz_directory: '/home/ubuntu/WorkHorse/'
 
-imagedir: '/mnt/WorkHorse/Mari_Data_Oneat/raw/gt/'
-segdir: '/mnt/WorkHorse/Mari_Data_Oneat/seg/'
-savedir: '/mnt/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt_lstm_d38_f48/'
-
-train_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
-train_seg_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
-train_csv_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv_aug/'
-train_save_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
-
-train_basic_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw/'
-train_basic_seg_image_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg/'
-train_basic_csv_dir: '/mnt/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_csv/'
+imagedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/raw/gt/'
+segdir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/seg/'
+savedir: '/home/ubuntu/WorkHorse/Mari_Data_Oneat/revolution_results/oneat_results/gt/'
