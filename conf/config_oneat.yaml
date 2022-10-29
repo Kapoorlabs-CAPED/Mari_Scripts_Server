@@ -4,8 +4,8 @@ params_train:
     startfilter: 64
     start_kernel: 7
     mid_kernel: 3
-    depth: 101
-    learning_rate: 1.0E-3
+    depth: 29
+    learning_rate: 1.0E-5
     batch_size: 2
     epochs: 250
     show: False
@@ -23,7 +23,7 @@ params_train:
 
 params_predict:
           n_tiles: [1,1,1]
-          event_threshold: 0.9999
+          event_threshold: 0.9
           event_confidence: 0.9
           start_project_mid: 4
           end_project_mid: 1
