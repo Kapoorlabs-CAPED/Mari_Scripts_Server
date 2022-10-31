@@ -23,7 +23,7 @@ params_train:
 
 params_predict:
           n_tiles: [1,1,1]
-          event_threshold: 0.9
+          event_threshold: 0.999
           event_confidence: 0.9
           start_project_mid: 4
           end_project_mid: 1

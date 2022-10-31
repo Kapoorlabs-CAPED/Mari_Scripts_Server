@@ -9,8 +9,8 @@ activation_image_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/for_activation
 activation_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps_seg/'
 metrics_image_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/seg/gt/'
-metrics_gt_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/oneat_metrics/'
-metrics_supress_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/oneat_metrics/gt/supress_csv_dir/'
+metrics_gt_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
+metrics_supress_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
 
 train_image_dir: '/home/debian/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
 train_seg_image_dir: '/home/debian/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
