@@ -6,8 +6,8 @@ from tensorflow.keras.models import save_model
 import os
 from oneat.NEATUtils.utils import load_json
 
-pb_model_dir = '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric_d38_f64/'
-h5_model = '/mnt/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric_d38_f64/weights.h5'
+pb_model_dir = '/home/debian/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
+h5_model = '/home/debian/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/weights.h5'
 
 
 
