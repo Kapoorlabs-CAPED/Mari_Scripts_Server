@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-
+from typing import List, Union
 @dataclass
 class ParamsTrain:
     startfilter: int
     start_kernel: int 
     mid_kernel: int 
-    depth: int 
+    depth: Union[int, list[int]]
     learning_rate: float 
     batch_size: int 
     epochs: int 

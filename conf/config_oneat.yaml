@@ -4,8 +4,8 @@ params_train:
     startfilter: 64
     start_kernel: 7
     mid_kernel: 3
-    depth: 29
-    learning_rate: 1.0E-5
+    depth: [6, 12, 24, 16]
+    learning_rate: 1.0E-3
     batch_size: 2
     epochs: 250
     show: False
