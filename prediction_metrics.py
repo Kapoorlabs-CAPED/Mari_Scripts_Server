@@ -19,8 +19,8 @@ def main(config : OneatConfig):
     groundtruth = gt_csv_dir + gt_csv_file
 
     
-    thresholdscore = 0.999
-    compute_score = ClassificationScore(predictions_dir, groundtruth, thresholdspace = 40, thresholdtime = 4, thresholdscore = thresholdscore, metric = 'Euclid')
+    thresholdscore = 0.99999
+    compute_score = ClassificationScore(predictions_dir, groundtruth, thresholdspace = 60, thresholdtime = 10, thresholdscore = thresholdscore, metric = 'Euclid')
     compute_score.model_scorer()
 
 if __name__=='__main__':

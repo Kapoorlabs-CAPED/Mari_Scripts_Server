@@ -1,7 +1,7 @@
 model_dir:  '/home/debian/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
 imagedir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segdir: '/home/debian/WorkHorse/Mari_Data_Oneat/seg/gt/'
-savedir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
+savedir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred/'
 
 
 npz_directory: '/home/debian/jean_zay_backup/Mari_Data_Training/oneat_training/'
@@ -10,7 +10,7 @@ activation_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/for_activation_m
 metrics_image_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/seg/gt/'
 metrics_gt_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
-metrics_supress_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
+metrics_supress_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred/Clean_CSV/'
 
 train_image_dir: '/home/debian/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
 train_seg_image_dir: '/home/debian/jean_zay_backup/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
