@@ -19,7 +19,11 @@ class ParamsTrain:
     nboxes: int
     pure_lstm: bool
     normalizeimage: bool
-
+    growth_rate: int
+    nb_filter: int
+    nb_layers_per_block: int
+    reduction: float
+    weight_decay: float
 
 
 @dataclass 

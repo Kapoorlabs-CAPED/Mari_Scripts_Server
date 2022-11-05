@@ -3,7 +3,7 @@
 
 import os
 
-from oneat.NEATModels import NEATVollNet, NEATTResNet, NEATLRNet
+from oneat.NEATModels import NEATVollNet, NEATTResNet, NEATLRNet, NEATDenseVollNet
 from oneat.NEATModels.config import volume_config, lstm_config
 from oneat.NEATUtils.utils import save_json, load_json
 import hydra
@@ -51,9 +51,14 @@ def main( config : OneatConfig):
     trainclass = eval(config.trainclass.training_class)
     trainconfig = eval(config.trainclass.training_config)
     pure_lstm = config.params_train.pure_lstm 
-    
+    growth_rate = config.params_train.growth_rate
+    nb_filter = config.params_train.nb_filter
+    nb_layers_per_block = config.params_train.nb_layers_per_block
+    reduction = config.params_train.reduction
+    weight_decay = config.params_train.weight_decay
     config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
+                            growth_rate = growth_rate, nb_filter = nb_filter, nb_layers_per_block = nb_layers_per_block, reduction = reduction, weight_decay = weight_decay,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
                             depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
                             show = show,startfilter = startfilter, batch_size = batch_size)

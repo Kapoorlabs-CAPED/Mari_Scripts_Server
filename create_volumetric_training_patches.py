@@ -16,7 +16,7 @@ def main( config : OneatConfig):
 
         #Specify the directory containing images
         train_image_dir = config.paths_oneat.train_image_dir
-        #Specify the directory contaiing csv files
+        #Specify the directory containing csv files
         train_csv_dir = config.paths_oneat.train_csv_dir
         #Specify the directory containing the segmentations
         train_seg_image_dir = config.paths_oneat.train_seg_image_dir
