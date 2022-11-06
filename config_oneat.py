@@ -21,7 +21,7 @@ class ParamsTrain:
     normalizeimage: bool
     growth_rate: int
     nb_filter: int
-    nb_layers_per_block: int
+    nb_layers_per_block: dict
     reduction: float
     weight_decay: float
 

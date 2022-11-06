@@ -20,7 +20,7 @@ params_train:
     normalizeimage: True
     growth_rate: 12
     nb_filter: -1
-    nb_layers_per_block: -1
+    nb_layers_per_block: {'depth' = [12,24,16]}
     reduction: 0.5
     weight_decay: 1e-4
 

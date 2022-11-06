@@ -31,7 +31,6 @@ def main( config : OneatConfig):
     #CNN network start layer, mid layers and lstm layer kernel size
     start_kernel = config.params_train.start_kernel
     mid_kernel = config.params_train.mid_kernel
-    #Network depth has to be 9n + 2, n= 3 or 4 is optimal for Notum dataset
     depth = config.params_train.depth
     #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
     learning_rate = config.params_train.learning_rate
