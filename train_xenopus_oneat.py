@@ -31,7 +31,6 @@ def main( config : OneatConfig):
     #CNN network start layer, mid layers and lstm layer kernel size
     start_kernel = config.params_train.start_kernel
     mid_kernel = config.params_train.mid_kernel
-    depth = config.params_train.depth
     #Size of the gradient descent length vector, start small and use callbacks to get smaller when reaching the minima
     learning_rate = config.params_train.learning_rate
     #For stochastic gradient decent, the batch size used for computing the gradients
@@ -52,12 +51,12 @@ def main( config : OneatConfig):
     pure_lstm = config.params_train.pure_lstm 
     growth_rate = config.params_train.growth_rate
     nb_filter = config.params_train.nb_filter
-    nb_layers_per_block = config.params_train.nb_layers_per_block
+    depth = dict(config.params_train.depth)
     reduction = config.params_train.reduction
     weight_decay = config.params_train.weight_decay
     config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
-                            growth_rate = growth_rate, nb_filter = nb_filter, nb_layers_per_block = nb_layers_per_block, reduction = reduction, weight_decay = weight_decay,
+                            growth_rate = growth_rate, nb_filter = nb_filter,reduction = reduction, weight_decay = weight_decay,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
                             depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
                             show = show,startfilter = startfilter, batch_size = batch_size)

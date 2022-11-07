@@ -28,7 +28,7 @@ class Params:
         min_size: int 
         min_size_mask: int 
         max_size: int 
-        n_tiles: tuple[int] 
+        n_tiles: tuple
         axes: str
         dounet: bool 
         seedpool: bool  

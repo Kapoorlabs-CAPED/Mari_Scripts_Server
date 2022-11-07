@@ -4,7 +4,6 @@ params_train:
     startfilter: 64
     start_kernel: 7
     mid_kernel: 3
-    depth: 40
     learning_rate: 1.0E-3
     batch_size: 32
     epochs: 250
@@ -20,7 +19,8 @@ params_train:
     normalizeimage: True
     growth_rate: 12
     nb_filter: -1
-    nb_layers_per_block: {'depth_0': 12, 'depth_1': 24, 'depth_2': 16}
+    depth: {'depth_0': 29}
+    #{'depth_0': 12, 'depth_1': 24, 'depth_2': 16}
     reduction: 0.5
     weight_decay: 1e-4
 
@@ -42,7 +42,7 @@ params_predict:
 
 trainclass:
      #Class can be NEATVollNet (ZYXT), NEATTResNet (YXT), NEATLRNet (TYXC) 
-     training_class: NEATDenseVollNet
+     training_class: NEATVollNet
      # volume_config, lstm_config
      training_config: volume_config
      # Cellsplitdiamondcordxenopus.json, Cellsplitcordxenopus.json

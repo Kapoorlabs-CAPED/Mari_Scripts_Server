@@ -5,7 +5,7 @@ class ParamsTrain:
     startfilter: int
     start_kernel: int 
     mid_kernel: int 
-    depth: Union[int, list[int]]
+    depth: dict
     learning_rate: float 
     batch_size: int 
     epochs: int 
@@ -21,7 +21,6 @@ class ParamsTrain:
     normalizeimage: bool
     growth_rate: int
     nb_filter: int
-    nb_layers_per_block: dict
     reduction: float
     weight_decay: float
 
