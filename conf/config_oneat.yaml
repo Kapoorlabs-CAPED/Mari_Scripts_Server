@@ -17,12 +17,9 @@ params_train:
     nboxes: 1
     pure_lstm: False
     normalizeimage: True
-    growth_rate: 12
-    nb_filter: -1
     depth: {'depth_0': 29}
     #{'depth_0': 12, 'depth_1': 24, 'depth_2': 16}
     reduction: 0.5
-    weight_decay: 1e-4
 
 
 params_predict:
