@@ -49,13 +49,15 @@ def main( config : OneatConfig):
     trainclass = eval(config.trainclass.training_class)
     trainconfig = eval(config.trainclass.training_config)
     pure_lstm = config.params_train.pure_lstm 
-    depth = dict(config.params_train.depth)
+    depth_0 = config.params_train.depth_0
+    depth_1 = config.params_train.depth_1
+    depth_2 = config.params_train.depth_2
     reduction = config.params_train.reduction
     config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
                             key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
                             reduction = reduction,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
-                            depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
+                            depth_0 = depth_0, depth_1 = depth_1, depth_2 = depth_2, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,
                             show = show,startfilter = startfilter, batch_size = batch_size)
 
     config_json = config.to_json()
