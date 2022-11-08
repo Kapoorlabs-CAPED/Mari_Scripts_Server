@@ -17,10 +17,7 @@ params_train:
     nboxes: 1
     pure_lstm: False
     normalizeimage: True
-    depth_0: 12 
-    depth_1: 24
-    depth_2: 16
-    depth: 29
+    depth: {'depth_0': 6, 'depth_1': 12, 'depth_2': 24}
     #{'depth_0': 12, 'depth_1': 24, 'depth_2': 16}
     reduction: 0.5
 

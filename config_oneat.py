@@ -5,10 +5,7 @@ class ParamsTrain:
     startfilter: int
     start_kernel: int 
     mid_kernel: int 
-    depth: int
-    depth_0 : int
-    depth_1 : int 
-    depth_2: int
+    depth: dict
     learning_rate: float 
     batch_size: int 
     epochs: int 
