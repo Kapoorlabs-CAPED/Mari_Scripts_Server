@@ -67,21 +67,13 @@ class Paths:
     train_seg_image_dir: str
     train_csv_dir: str
     train_save_dir: str  
-    train_basic_image_dir: str 
-    train_basic_seg_image_dir: str
-    train_basic_csv_dir: str
     activation_image_dir: str 
     activation_seg_dir: str
     metrics_image_dir: str
     metrics_seg_dir: str
     metrics_gt_csv_dir: str 
-    metrics_supress_csv_dir: str 
-    train_image_dir: str 
-    train_seg_image_dir: str 
-    train_csv_dir: str 
-    train_save_dir: str 
-    train_basic_image_dir: str 
-    train_basic_csv_dir: str     
+    metrics_pred_csv_dir: str 
+    
     
 @dataclass 
 class OneatConfig:
