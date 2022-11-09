@@ -1,0 +1,7 @@
+model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/oneat_xenopus_sparsenet/'
+imagedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/third_dataset/'
+segdir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/third_dataset/'
+savedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'
+npz_directory: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/'
+
+

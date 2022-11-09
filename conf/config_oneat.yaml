@@ -48,5 +48,5 @@ trainclass:
 
 defaults:
    - files_oneat: oneat_files
-   - paths_oneat: oneat_paths_aws
+   - paths_oneat: oneat_paths_jean_zay
    - _self_     
