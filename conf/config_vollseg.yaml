@@ -36,6 +36,6 @@ params:
 
 defaults:
    - files_vollseg: vollseg_files
-   - paths_vollseg: vollseg_paths_ovh
+   - paths_vollseg: vollseg_paths_jean_zay
    - _self_ 
        

@@ -16,7 +16,6 @@ class ParamsTrain:
     imagex: int 
     imagey: int
     imagez: int
-    pure_lstm: bool
     reduction: float
 
 
@@ -27,7 +26,7 @@ class ParamsPredict:
      event_confidence: float 
      file_type: str
      remove_markers: bool
-     
+    
      
     
 @dataclass

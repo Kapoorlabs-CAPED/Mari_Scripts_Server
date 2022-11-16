@@ -1,12 +1,12 @@
-model_dir:  '/home/debian/WorkHorse/Mari_Models/Oneat/oneat_xenopus_volumetric/'
+model_dir:  '/home/debian/WorkHorse/Mari_Models/Oneat/oneat_xenopus_densenet/'
 imagedir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/gt/'
 segdir: '/home/debian/WorkHorse/Mari_Data_Oneat/seg/gt/'
-savedir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred/'
+savedir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred_densenet/'
 
 metrics_image_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/seg/gt/'
 metrics_gt_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
-metrics_pred_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred/Clean_CSV/'
+metrics_pred_csv_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/gt/Clean_CSV/'
 
 activation_image_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps/'
 activation_seg_dir: '/home/debian/WorkHorse/Mari_Data_Oneat/raw/for_activation_maps_seg/'

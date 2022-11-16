@@ -37,7 +37,7 @@ def main( config : OneatConfig):
     batch_size = config.params_train.batch_size
     #Training epochs, longer the better with proper chosen learning rate
     epochs = config.params_train.epochs
-    nboxes = config.params_train.nboxes
+    
     #The inbuilt model stride which is equal to the nulber of times image was downsampled by the network
     show = config.params_train.show
     stage_number = config.params_train.stage_number
@@ -48,11 +48,10 @@ def main( config : OneatConfig):
     imagez = config.params_train.imagez
     trainclass = eval(config.trainclass.training_class)
     trainconfig = eval(config.trainclass.training_config)
-    pure_lstm = config.params_train.pure_lstm 
     depth = dict(config.params_train.depth)
     reduction = config.params_train.reduction
-    config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name, pure_lstm = pure_lstm, 
-                            key_categories = key_categories, key_cord = key_cord, nboxes = nboxes, imagex = imagex,
+    config = trainconfig(npz_directory = npz_directory, npz_name = npz_name, npz_val_name = npz_val_name,  
+                            key_categories = key_categories, key_cord = key_cord, imagex = imagex,
                             reduction = reduction,
                             imagey = imagey, imagez = imagez, size_tminus = size_tminus, size_tplus = size_tplus, epochs = epochs,learning_rate = learning_rate,
                             depth = depth, start_kernel = start_kernel, mid_kernel = mid_kernel, stage_number = stage_number,

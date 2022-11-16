@@ -1,4 +1,4 @@
-model_dir:  '/home/ec2-user/WorkHorse/Mari_Models/Oneat/oneat_xenopus_sparsenet/'
+model_dir:  '/home/ec2-user/WorkHorse/Mari_Models/Oneat/oneat_xenopus_densenet/'
 imagedir: '/home/ec2-user/WorkHorse/Mari_Data_Oneat/raw/third_dataset/'
 segdir: '/home/ec2-user/WorkHorse/Mari_Data_Oneat/seg/third_dataset/'
 savedir: '/home/ec2-user/WorkHorse/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'
