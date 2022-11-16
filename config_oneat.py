@@ -16,9 +16,7 @@ class ParamsTrain:
     imagex: int 
     imagey: int
     imagez: int
-    nboxes: int
     pure_lstm: bool
-    normalizeimage: bool
     reduction: float
 
 
@@ -27,15 +25,8 @@ class ParamsPredict:
      n_tiles: tuple
      event_threshold: float
      event_confidence: float 
-     start_project_mid: int 
-     end_project_mid: int 
-     normalize: bool 
-     nms_function: str 
      file_type: str
      remove_markers: bool
-     nms_space: int 
-     nms_time: int
-     volume: bool
      
      
     
