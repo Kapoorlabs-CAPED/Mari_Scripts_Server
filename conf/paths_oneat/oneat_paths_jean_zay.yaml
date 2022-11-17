@@ -1,7 +1,7 @@
 model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/oneat_xenopus_densenet/'
-imagedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/third_dataset/'
-segdir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/third_dataset/'
-savedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'
+imagedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset/'
+segdir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/second_dataset/'
+savedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/second_dataset/'
 
 metrics_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
 metrics_seg_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/gt/'

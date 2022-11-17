@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1             # Number of nodes 
-#SBATCH -A jsy@v100
+#SBATCH -A lzc@v100
 #SBATCH --qos=qos_gpu-t3
 #SBATCH --gres=gpu:1         # Allocate 4 GPUs per node
 #SBATCH -C v100-32g
@@ -15,9 +15,9 @@ module purge # purging modules inherited by default
 module load anaconda-py3/2020.11
 #conda init bash # deactivating environments inherited by default
 conda deactivate
-conda activate genie
+conda activate naparienv
 set -x # activating echo of
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/linkhome/rech/gengoq01/uzj81mi/.conda/envs/genie/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/linkhome/rech/gengoq01/uzj81mi/.conda/envs/naparienv/lib/
 echo $LD_LIBRARY_PATH
 
 python  /gpfswork/rech/jsy/uzj81mi/Mari_Scripts_Server/predict_xenopus_vollseg.py

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --nodes=1            # Number of nodes 
-#SBATCH -A jsy@v100
-#SBATCH --gres=gpu:1         
-#SBATCH -C v100-32g          # Run the job on a Tesla V100
-
+#SBATCH -A goy@cpu
+#SBATCH --partition=prepost
+##SBATCH --gres=gpu:1         
+##SBATCH -C v100-32g          # Run the job on a Tesla V100
 #SBATCH --job-name=oneat     # Jobname 
 #SBATCH --cpus-per-task=40
 #SBATCH --output=oneat.o%j   # Output file 

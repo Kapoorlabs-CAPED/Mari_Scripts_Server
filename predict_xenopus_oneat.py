@@ -23,7 +23,7 @@ def main( config : OneatConfig):
           model_dir = config.paths_oneat.model_dir
           savedir = config.paths_oneat.savedir
         
-          remove_markers = config.params_predict.remove_markers
+          
           division_categories_json = model_dir + config.trainclass.categories_json
           catconfig = load_json(division_categories_json)
           division_cord_json = model_dir + config.trainclass.cord_json
@@ -44,8 +44,7 @@ def main( config : OneatConfig):
                              n_tiles = n_tiles, 
                              event_threshold = event_threshold, 
                              event_confidence = event_confidence,
-                             marker_tree = marker_tree, 
-                             remove_markers = remove_markers)
+                             marker_tree = marker_tree)
                
                
 if __name__=="__main__":
