@@ -22,7 +22,7 @@ def main( config : OneatConfig):
         event_threshold = config.params_predict.event_threshold
         nms_space = config.params_predict.nms_space
         nms_time = config.params_predict.nms_time
-        volume = config.params_predict.volume 
+        volume = True 
         NEATViz(imagedir,
                 csvdir,
                 savedir,
