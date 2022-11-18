@@ -26,6 +26,8 @@ class ParamsPredict:
      event_confidence: float 
      file_type: str
      remove_markers: bool
+     nms_space: int
+     nms_time: int
     
      
     

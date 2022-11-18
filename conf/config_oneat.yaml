@@ -18,11 +18,14 @@ params_train:
     reduction: 0.5
 
 
+
 params_predict:
           n_tiles: [1,1,1]
           event_threshold: 0.999
           event_confidence: 0.9
           file_type: '*.tif'
+          nms_space: 20
+          nms_time: 2
       
           
 
