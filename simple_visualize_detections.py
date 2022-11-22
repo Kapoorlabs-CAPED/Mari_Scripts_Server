@@ -13,15 +13,8 @@ configstore.store(name = 'OneatConfig', node = OneatConfig)
 @hydra.main(config_path = 'conf', config_name = 'config_oneat')
 def main( config : OneatConfig):
         
-        csvdir = config.paths_oneat.savedir
-        csvfile = config.files_oneat.pred_csv
         event_threshold = config.params_predict.event_threshold
-        
-        VizDet(
-                os.path.join(csvdir, csvfile),
-                
-                event_threshold = event_threshold)
-
+        VizDet()
 
 if __name__=='__main__':
      main() 
