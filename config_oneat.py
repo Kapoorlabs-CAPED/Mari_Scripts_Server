@@ -46,6 +46,7 @@ class Files:
     gt_image: str 
     gt_seg_image: str 
     gt_csv: str
+    pred_csv : str
 
     
 @dataclass
