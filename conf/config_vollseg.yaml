@@ -33,6 +33,17 @@ params:
     UseProbability: True 
     donormalize: True 
     ExpandLabels: False
+    diameter_cellpose: 34.6
+    stitch_threshold: 0.5
+    channel_membrane: 0
+    channel_nuclei: 1
+    flow_threshold: 0.4 
+    cellprob_threshold: 0.0
+    anisotropy: None
+    cellpose_model: True
+    custom_cellpose_model: False
+     
+    
 
 defaults:
    - files_vollseg: vollseg_files

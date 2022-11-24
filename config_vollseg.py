@@ -36,6 +36,16 @@ class Params:
         UseProbability: bool 
         donormalize: bool 
         ExpandLabels: bool
+        diameter_cellpose: float
+        stitch_threshold: float 
+        channel_membrane: int 
+        channel_nuclei: int 
+        flow_threshold: float 
+        cellprob_threshold: float 
+        anisotropy: float 
+        cellpose_model: bool 
+        custom_cellpose_model: bool
+        
         
     
 @dataclass
@@ -45,6 +55,7 @@ class Paths:
     unet_model_dir:  str
     roi_model_dir:  str
     den_model_dir:  str
+    cellpose_model_dir : str
     predict_image_dir: str
     save_dir: str 
     base_dir: str
@@ -60,6 +71,7 @@ class Files:
     unet_model_name: str
     roi_model_name: str
     den_model_name: str 
+    cellpose_model_name: str
     
     
     
