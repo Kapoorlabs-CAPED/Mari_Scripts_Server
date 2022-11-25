@@ -1,9 +1,9 @@
 model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
-star_model_dir: model_dir +  'StarDist3D/'
-unet_model_dir:  model_dir + 'Unet3D/'
-roi_model_dir:  model_dir + 'MASKUNET/'
-den_model_dir:  model_dir +'CARE/'
-cellpose_model_dir: model_dir + 'CellPose/'
+star_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDist3D/'
+unet_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
+roi_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'MASKUNET/'
+den_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CARE/'
+cellpose_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221121_182849'
 
 
 
