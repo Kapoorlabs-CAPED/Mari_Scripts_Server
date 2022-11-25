@@ -42,6 +42,7 @@ params:
     anisotropy: None
     cellpose_model: True
     custom_cellpose_model: False
+    gpu: False
      
     
 

@@ -31,7 +31,7 @@ def main( config : VollSegConfig):
                 flow_threshold = config.params.flow_threshold
                 cellprob_threshold = config.params.cellprob_threshold
                 anisotropy = config.params.anisotropy
-                
+                gpu = config.params.gpu
                 
                 unet_model = UNET(config = None, name = unet_model_name, basedir = model_dir)
                 star_model = StarDist3D(config = None, name = star_model_name, basedir = model_dir)
@@ -73,6 +73,7 @@ def main( config : VollSegConfig):
                                         custom_cellpose_model = custom_cellpose_model, 
                                         pretrained_cellpose_model_path = pretrained_cellpose_model_path,
                                         cellpose_model_name = cellpose_model_name,
+                                        gpu = gpu,
                                         anisotropy = anisotropy,
                                         axes = axes, 
                                         min_size = min_size,  

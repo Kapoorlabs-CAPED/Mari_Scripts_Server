@@ -45,6 +45,7 @@ class Params:
         anisotropy: float 
         cellpose_model: bool 
         custom_cellpose_model: bool
+        gpu: bool
         
         
     
