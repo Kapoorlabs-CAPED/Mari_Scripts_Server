@@ -11,7 +11,7 @@ params:
     n_patches_per_image: 32
     n_rays: 96
     startfilter: 32
-    erosion_iterations: 0
+    erosion_iterations: 5
     use_gpu_opencl: False
     generate_npz: False
     backbone: 'unet'
@@ -28,7 +28,7 @@ params:
     n_tiles: [4,4,4]
     axes: 'ZYX'
     dounet: False
-    seedpool: True 
+    seedpool: False 
     slice_merge: False
     UseProbability: True 
     donormalize: True 

@@ -54,6 +54,7 @@ def main( config : VollSegConfig):
                 donormalize = config.params.donormalize
                 axes = config.params.axes
                 ExpandLabels = config.params.ExpandLabels
+                erosion_iterations = config.params.erosion_iterations
                 for fname in filesRaw:
                 
                                 image = imread(fname)
@@ -74,6 +75,7 @@ def main( config : VollSegConfig):
                                         pretrained_cellpose_model_path = pretrained_cellpose_model_path,
                                         cellpose_model_name = cellpose_model_name,
                                         gpu = gpu,
+                                        erosion_iterations = erosion_iterations,
                                         anisotropy = anisotropy,
                                         axes = axes, 
                                         min_size = min_size,  
