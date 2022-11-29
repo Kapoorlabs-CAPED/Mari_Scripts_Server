@@ -42,8 +42,7 @@ class Params:
         channel_nuclei: int 
         flow_threshold: float 
         cellprob_threshold: float 
-        anisotropy: float 
-        cellpose_model: bool 
+        cellpose_model: bool
         custom_cellpose_model: bool
         gpu: bool
         do_3D: bool

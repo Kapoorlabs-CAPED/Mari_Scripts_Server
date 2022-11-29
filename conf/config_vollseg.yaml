@@ -39,7 +39,6 @@ params:
     channel_nuclei: 1
     flow_threshold: 0.4 
     cellprob_threshold: 0.0
-    anisotropy: None
     cellpose_model: True
     custom_cellpose_model: False
     gpu: False
