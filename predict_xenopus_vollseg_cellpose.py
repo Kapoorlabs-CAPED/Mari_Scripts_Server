@@ -45,7 +45,7 @@ def main( config : VollSegConfig):
                
                 min_size = config.params.min_size
                 min_size_mask = config.params.min_size_mask
-                max_size = config.params.max_size
+                do_3D = config.params.do_3D
                 n_tiles = config.params.n_tiles
                 dounet = config.params.dounet
                 seedpool = config.params.seedpool
@@ -80,7 +80,6 @@ def main( config : VollSegConfig):
                                         axes = axes, 
                                         min_size = min_size,  
                                         min_size_mask = min_size_mask,
-                                        max_size = max_size,
                                         donormalize=donormalize,
                                         n_tiles = n_tiles,
                                         ExpandLabels = ExpandLabels,
@@ -88,7 +87,8 @@ def main( config : VollSegConfig):
                                         UseProbability = UseProbability, 
                                         save_dir = save_dir, 
                                         Name = Name,
-                                        dounet = dounet)   
+                                        dounet = dounet,
+                                        do_3D= do_3D)
                                         
 if __name__=='__main__':
      main()                                         

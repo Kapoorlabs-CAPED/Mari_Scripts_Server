@@ -34,7 +34,7 @@ params:
     donormalize: True 
     ExpandLabels: False
     diameter_cellpose: 34.6
-    stitch_threshold: 0.5
+    stitch_threshold: 0
     channel_membrane: 0
     channel_nuclei: 1
     flow_threshold: 0.4 
@@ -43,6 +43,7 @@ params:
     cellpose_model: True
     custom_cellpose_model: False
     gpu: False
+    do_3D: True
      
     
 

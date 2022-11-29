@@ -46,6 +46,7 @@ class Params:
         cellpose_model: bool 
         custom_cellpose_model: bool
         gpu: bool
+        do_3D: bool
         
         
     
