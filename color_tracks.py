@@ -28,7 +28,7 @@ def main( config : VollSegConfig):
         scale = 255
         TM.import_TM_XML_Relabel(xml_path,LabelImage,spot_csv, track_csv, savedir, scale = scale)
         
-if __name__=='main':
+if __name__=='__main__':
     
     main()        
 

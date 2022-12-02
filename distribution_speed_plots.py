@@ -24,7 +24,7 @@ def main():
         Path(savedir).mkdir(exist_ok=True)
         TM.import_TM_XML_statplots(xml_path,spot_csv, links_csv, savedir)
         
-if __name__=='main':
+if __name__=='__main__':
     
     main()        
 

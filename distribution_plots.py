@@ -27,7 +27,7 @@ def main():
         Path(savedir).mkdir(exist_ok=True)
         TM.import_TM_XML_distplots(xml_path,spot_csv, track_csv, savedir)
         
-if __name__=='main':
+if __name__=='__main__':
     
     main()        
 
