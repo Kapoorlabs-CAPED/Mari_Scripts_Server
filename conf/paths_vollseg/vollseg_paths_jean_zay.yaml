@@ -1,3 +1,4 @@
+Trained models stored location
 model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
 star_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDist3D/'
 unet_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
@@ -5,12 +6,18 @@ roi_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/MASKUNET/'
 den_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CARE/'
 cellpose_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221121_182849'
 
+#For tracking
+tracking_results_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'
+tracking_hyperstack_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/'
+tracking_raw_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/third_dataset/'
+tracking_seg_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/third_dataset/'
 
-
+#For training
 base_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
 raw_dir: 'raw/'
 real_mask_dir: 'real_mask/'
 binary_mask_dir: 'binary_mask/'
 
+#For segmentation prediction
 predict_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/fourth_dataset/for_vollseg_cellpose_test/'
 save_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/fourth_dataset/for_vollseg_cellpose_test/vollcellseg/'

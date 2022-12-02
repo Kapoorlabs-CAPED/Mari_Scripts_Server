@@ -63,6 +63,9 @@ class Paths:
     raw_dir: str
     real_mask_dir: str
     binary_mask_dir: str
+    tracking_results_dir: str
+    tracking_seg_image_dir: str
+    tracking_raw_image_dir: str 
     
 @dataclass
 class Files:  
@@ -73,7 +76,12 @@ class Files:
     roi_model_name: str
     den_model_name: str 
     cellpose_model_name: str
-    
+    xml_filename: str
+    tracks_csv: str 
+    spots_csv: str
+    edges_csv: str
+    tracking_raw_image: str
+    tracking_seg_image: str
     
     
 @dataclass

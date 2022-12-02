@@ -1,41 +1,38 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 
 
-import sys
-sys.path.append('../../')
+
 import numpy as np
 import os
-from tifffile import imread, imwrite
-import matplotlib.pyplot as plt
-import napari
 import napatrackmater.bTrackmate as TM
 from pathlib import Path
+import hydra 
+from config_vollseg import VollSegConfig
+from hydra.core.config_store import ConfigStore 
 get_ipython().run_line_magic('gui', 'qt')
 
+configstore = ConfigStore.instance()
+configstore.store(name = 'VollSegConfig', node = VollSegConfig)
 
-# In[2]:
+@hydra.main(config_path = 'conf', config_name = 'config_vollseg')
+def main():
+        #Trackmate writes an XML file of tracks, we use it as input
+        xml_path = os.path.join(config.paths_vollseg.tracking_results_dir,config.files_vollseg.xml_filename) 
+        #Trackmate writes a spots and tracks file as csv
+        spot_csv = os.path.join(config.paths_vollseg.tracking_results_dir,config.files_vollseg.spots_csv)
+        track_csv = os.path.join(config.paths_vollseg.tracking_results_dir,config.files_vollseg.tracks_csv)
+        savedir = config.paths_vollseg.tracking_results_dir
+        Path(savedir).mkdir(exist_ok=True)
+        TM.import_TM_XML_distplots(xml_path,spot_csv, track_csv, savedir)
+        
+if __name__=='main':
+    
+    main()        
 
 
-#Trackmate writes an XML file of tracks, we use it as input
-xml_path = '/Users/aimachine/DrosTracking/Tracking_dros-002.xml'
-#Trackmate writes a spots and tracks file as csv
-spot_csv = '/Users/aimachine/DrosTracking/spots_dros-1.csv'
-track_csv = '/Users/aimachine/DrosTracking/tracks_dros-1.csv'
-savedir = '/Users/aimachine/DrosTracking/'
-Path(savedir).mkdir(exist_ok=True)
-
-
-# In[3]:
-
-
-TM.import_TM_XML_distplots(xml_path,spot_csv, track_csv, savedir)
-
-
-# In[ ]:
 
 
 
