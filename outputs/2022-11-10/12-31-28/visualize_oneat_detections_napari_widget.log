@@ -1,0 +1,11 @@
+[2022-11-10 12:31:29,071][vispy][WARNING] - XKeyboard extension not present on the X server
+[2022-11-10 12:31:29,931][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 193, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
+[2022-11-10 12:31:29,932][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 194, resource id: 79691781, major code: 55 (CreateGC), minor code: 0
+[2022-11-10 12:31:29,932][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 195, resource id: 79691781, major code: 55 (CreateGC), minor code: 0
+[2022-11-10 12:31:33,736][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 432, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
+[2022-11-10 12:31:33,736][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 433, resource id: 79691809, major code: 55 (CreateGC), minor code: 0
+[2022-11-10 12:31:33,736][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 434, resource id: 79691809, major code: 55 (CreateGC), minor code: 0
+[2022-11-10 12:31:52,982][OpenGL.acceleratesupport][INFO] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+[2022-11-10 12:34:27,266][vispy][WARNING] - QXcbConnection: XCB error: 13 (BadGC), sequence: 2422, resource id: 79691810, major code: 60 (FreeGC), minor code: 0
+[2022-11-10 12:34:27,267][vispy][WARNING] - QXcbConnection: XCB error: 13 (BadGC), sequence: 2423, resource id: 79691811, major code: 60 (FreeGC), minor code: 0
+[2022-11-10 12:34:27,267][vispy][WARNING] - QXcbConnection: XCB error: 4 (BadPixmap), sequence: 2424, resource id: 79691809, major code: 54 (FreePixmap), minor code: 0
