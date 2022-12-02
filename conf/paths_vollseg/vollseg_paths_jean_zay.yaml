@@ -1,4 +1,4 @@
-Trained models stored location
+#Trained models stored location
 model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/'
 star_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDist3D/'
 unet_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
