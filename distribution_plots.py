@@ -17,7 +17,7 @@ configstore = ConfigStore.instance()
 configstore.store(name = 'VollSegConfig', node = VollSegConfig)
 
 @hydra.main(config_path = 'conf', config_name = 'config_vollseg')
-def main():
+def main(config : VollSegConfig):
         #Trackmate writes an XML file of tracks, we use it as input
         xml_path = os.path.join(config.paths_vollseg.tracking_results_dir,config.files_vollseg.xml_filename) 
         #Trackmate writes a spots and tracks file as csv
