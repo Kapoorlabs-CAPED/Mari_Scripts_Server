@@ -1,0 +1,10 @@
+[2022-11-01 14:28:51,933][vispy][WARNING] - XKeyboard extension not present on the X server
+[2022-11-01 14:28:52,755][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 193, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
+[2022-11-01 14:28:52,755][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 194, resource id: 88080389, major code: 55 (CreateGC), minor code: 0
+[2022-11-01 14:28:52,756][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 195, resource id: 88080389, major code: 55 (CreateGC), minor code: 0
+[2022-11-01 14:28:56,870][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 418, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
+[2022-11-01 14:28:56,870][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 419, resource id: 88080417, major code: 55 (CreateGC), minor code: 0
+[2022-11-01 14:28:56,870][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 420, resource id: 88080417, major code: 55 (CreateGC), minor code: 0
+[2022-11-01 14:29:18,782][vispy][WARNING] - QXcbConnection: XCB error: 13 (BadGC), sequence: 776, resource id: 88080418, major code: 60 (FreeGC), minor code: 0
+[2022-11-01 14:29:18,782][vispy][WARNING] - QXcbConnection: XCB error: 13 (BadGC), sequence: 777, resource id: 88080419, major code: 60 (FreeGC), minor code: 0
+[2022-11-01 14:29:18,782][vispy][WARNING] - QXcbConnection: XCB error: 4 (BadPixmap), sequence: 778, resource id: 88080417, major code: 54 (FreePixmap), minor code: 0

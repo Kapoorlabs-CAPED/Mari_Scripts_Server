@@ -1,0 +1,4 @@
+[2022-11-16 08:08:04,899][vispy][WARNING] - XKeyboard extension not present on the X server
+[2022-11-16 08:08:08,090][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 193, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
+[2022-11-16 08:08:08,093][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 194, resource id: 71303173, major code: 55 (CreateGC), minor code: 0
+[2022-11-16 08:08:08,093][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 195, resource id: 71303173, major code: 55 (CreateGC), minor code: 0

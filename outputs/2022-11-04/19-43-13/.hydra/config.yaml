@@ -1,0 +1,56 @@
+files_vollseg:
+  npz_filename: XenopusNucleiSeg
+  model_name: nuclei_xenopus_mari
+  star_model_name: StarDist3D/nuclei_xenopus_mari
+  unet_model_name: Unet3D/unet_nuclei_xenopus_mari
+  roi_model_name: MASKUNET/roi_nuclei_xenopus
+  den_model_name: CARE/denoising_nuclei_xenopus
+paths_vollseg:
+  model_dir: /home/debian/WorkHorse/Mari_Models/
+  star_model_dir: model_dir +  'StarDist3D/'
+  unet_model_dir: model_dir + 'Unet3D/'
+  roi_model_dir: model_dir + 'MASKUNET/'
+  den_model_dir: model_dir +'CARE/'
+  base_dir: /home/debian/WorkHorse/Mari_Data_Training/segmentation_training/
+  raw_dir: raw/
+  real_mask_dir: real_mask/
+  binary_mask_dir: binary_mask/
+  predict_image_dir: /home/debian/WorkHorse/
+  save_dir: /home/debian/WorkHorse/seg/
+params:
+  depth: 4
+  epochs: 200
+  learning_rate: 0.0003
+  batch_size: 2
+  patch_x: 128
+  patch_y: 128
+  patch_z: 16
+  kern_size: 3
+  n_patches_per_image: 32
+  n_rays: 96
+  startfilter: 32
+  erosion_iterations: 0
+  use_gpu_opencl: false
+  generate_npz: false
+  backbone: unet
+  load_data_sequence: false
+  validation_split: 0.01
+  n_channel_in: 1
+  train_unet: true
+  train_star: false
+  train_loss: mae
+  file_type: '*.tif'
+  min_size: 1
+  min_size_mask: 10
+  max_size: 1000000
+  n_tiles:
+  - 4
+  - 4
+  - 4
+  axes: ZYX
+  dounet: false
+  seedpool: true
+  slice_merge: false
+  UseProbability: true
+  donormalize: true
+  ExpandLabels: false
