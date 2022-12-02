@@ -12,7 +12,6 @@ from pathlib import Path
 import hydra 
 from config_vollseg import VollSegConfig
 from hydra.core.config_store import ConfigStore 
-get_ipython().run_line_magic('gui', 'qt')
 
 configstore = ConfigStore.instance()
 configstore.store(name = 'VollSegConfig', node = VollSegConfig)

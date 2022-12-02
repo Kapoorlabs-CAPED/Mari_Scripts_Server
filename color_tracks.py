@@ -9,7 +9,6 @@ from pathlib import Path
 from config_vollseg import VollSegConfig
 import hydra
 from hydra.core.config_store import ConfigStore
-get_ipython().run_line_magic('gui', 'qt')
 
 
 configstore = ConfigStore.instance()
