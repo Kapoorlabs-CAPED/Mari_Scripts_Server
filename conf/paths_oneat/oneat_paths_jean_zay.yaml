@@ -1,0 +1,18 @@
+model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Oneat/oneat_xenopus_densenet/'
+imagedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/second_dataset/'
+segdir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/second_dataset/'
+savedir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/second_dataset/'
+
+metrics_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/gt/'
+metrics_seg_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/gt/'
+metrics_gt_csv_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/gt/'
+metrics_pred_csv_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/gt/pred/Clean_CSV/'
+
+activation_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/for_activation_maps/'
+activation_seg_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/for_activation_maps_seg/'
+
+npz_directory: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/'
+train_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/ovh_diamond_raw_aug/'
+train_seg_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/ovh_diamond_seg_aug/'
+train_csv_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/ovh_diamond_csv_aug/'
+train_save_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/oneat_training/oneat_train_diamond_patches_m1p1/'
