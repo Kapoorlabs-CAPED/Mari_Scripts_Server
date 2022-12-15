@@ -5,6 +5,8 @@ unet_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
 roi_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/MASKUNET/'
 den_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CARE/'
 cellpose_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221121_182849'
+npy_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/for_vollcellsegpose_train1/mask_segnpy/'
+npy_mask_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/for_vollcellsegpose_train1/mask_seg/'
 
 #For tracking
 tracking_results_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/revolution_results/tracking_results/third_dataset/'

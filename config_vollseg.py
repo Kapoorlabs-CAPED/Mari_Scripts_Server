@@ -66,6 +66,8 @@ class Paths:
     tracking_results_dir: str
     tracking_seg_image_dir: str
     tracking_raw_image_dir: str 
+    npy_dir: str
+    npy_mask_dir: str
     
 @dataclass
 class Files:  
