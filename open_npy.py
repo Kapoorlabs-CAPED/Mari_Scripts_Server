@@ -22,7 +22,7 @@ def main(config: VollSegConfig):
     for fname in filesRaw:
         data = np.load(fname, allow_pickle=True).item()
         label_image = data['masks']
-        imwrite(os.path.join(save_dir, Path(fname).stem), label_image.astype('uint16'))
+        imwrite(os.path.join(save_dir, Path(fname).stem) + '.tif', label_image.astype('uint16'))
         
         
         
