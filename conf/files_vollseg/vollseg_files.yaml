@@ -1,5 +1,5 @@
 npz_filename: 'XenopusMembraneSeg'
-unet_model_name: 'Unet3D/membrane_xenopus_mari'
+unet_model_name: 'Unet3D/unet_membrane_xenopus_mari'
 star_model_name: 'StarDist3D/membrane_xenopus_mari'
 unet_membrane_model_name: 'Unet3D/unet_membrane_xenopus_mari'
 roi_model_name: 'MASKUNET/roi_nuclei_xenopus'
