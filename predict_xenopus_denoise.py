@@ -44,6 +44,3 @@ def main( config : VollSegConfig):
                                 n_tiles = n_tiles,
                                 save_dir = save_dir, 
                                 Name = Name)    
-
-if __name__=='__main__':
-     main() 

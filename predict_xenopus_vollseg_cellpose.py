@@ -17,7 +17,7 @@ def main(config: VollSegConfig):
     model_dir = config.paths_vollseg.model_dir
     save_dir = config.paths_vollseg.save_dir
 
-    unet_model_name = config.files_vollseg.unet_model_name
+    unet_model_name = config.files_vollseg.unet_model_name    
     star_model_name = config.files_vollseg.star_model_name
     roi_model_name = config.files_vollseg.roi_model_name
     pretrained_cellpose_model_path = config.paths_vollseg.cellpose_model_dir

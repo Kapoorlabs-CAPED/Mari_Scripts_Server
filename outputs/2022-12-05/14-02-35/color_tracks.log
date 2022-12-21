@@ -1,0 +1,5 @@
+[2022-12-05 14:04:20,202][vispy][WARNING] - Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[2022-12-05 14:04:20,202][vispy][WARNING] - This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl, xcb.
+

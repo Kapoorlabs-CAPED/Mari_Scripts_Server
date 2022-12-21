@@ -1,32 +1,33 @@
 params:
    
-    depth: 4
+    depth: 3
     epochs: 200
     learning_rate: 0.0003
-    batch_size: 2
+    batch_size: 16
     patch_x: 128
     patch_y: 128
-    patch_z: 16
+    patch_z: 16    
     kern_size: 3
-    n_patches_per_image: 32
+    n_patches_per_image: 128
     n_rays: 96
     startfilter: 32
-    erosion_iterations: 5
+    erosion_iterations: 0
     use_gpu_opencl: False
-    generate_npz: False
+    generate_npz: True
     backbone: 'unet'
     load_data_sequence: False
     validation_split: 0.01
     n_channel_in: 1
     train_unet: True
+    train_seed_unet: False
     train_star: False
     train_loss: 'mae'
     file_type: '*.tif'
     min_size: 1
     min_size_mask: 10
     max_size: 1000000
-    n_tiles: [4,4,4]
-    axes: 'ZYX'
+    n_tiles: [4,4]
+    axes: 'YX'
     dounet: False
     seedpool: False 
     slice_merge: False

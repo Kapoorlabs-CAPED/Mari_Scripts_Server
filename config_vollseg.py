@@ -22,7 +22,8 @@ class Params:
         validation_split: float 
         n_channel_in: int 
         train_unet: bool 
-        train_star: bool 
+        train_star: bool
+        train_seed_unet: bool 
         train_loss: str
         file_type: str
         min_size: int 
@@ -63,6 +64,7 @@ class Paths:
     raw_dir: str
     real_mask_dir: str
     binary_mask_dir: str
+    binary_erode_mask_dir: str
     tracking_results_dir: str
     tracking_seg_image_dir: str
     tracking_raw_image_dir: str 
