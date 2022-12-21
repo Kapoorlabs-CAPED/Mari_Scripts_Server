@@ -17,7 +17,8 @@ def main(config: VollSegConfig):
     model_dir = config.paths_vollseg.model_dir
     save_dir = config.paths_vollseg.save_dir
 
-    unet_model_name = config.files_vollseg.unet_model_name    
+    unet_model_name = config.files_vollseg.unet_model_name   
+    unet_membrane_model_name = config.files_vollseg.unet_membrane_model_name  
     star_model_name = config.files_vollseg.star_model_name
     roi_model_name = config.files_vollseg.roi_model_name
     pretrained_cellpose_model_path = config.paths_vollseg.cellpose_model_dir
@@ -33,6 +34,7 @@ def main(config: VollSegConfig):
     gpu = config.params.gpu
 
     unet_model = UNET(config=None, name=unet_model_name, basedir=model_dir)
+    unet_membrane_model = UNET(config=None, name=unet_membrane_model_name, basedir=model_dir)
     star_model = StarDist3D(config=None, name=star_model_name, basedir=model_dir)
     roi_model = MASKUNET(config=None, name=roi_model_name, basedir=model_dir)
 
@@ -63,6 +65,7 @@ def main(config: VollSegConfig):
                     flow_threshold=flow_threshold,
                     cellprob_threshold=cellprob_threshold,
                     unet_model=unet_model,
+                    unet_membrane_model=unet_membrane_model,
                     star_model=star_model,
                     roi_model=roi_model,
                     seedpool=seedpool,
@@ -82,6 +85,7 @@ def main(config: VollSegConfig):
                     UseProbability=UseProbability,
                     save_dir=save_dir,
                     Name=Name,
+                    
                     dounet=dounet,
                     do_3D=do_3D)
 

@@ -77,6 +77,7 @@ class Files:
     model_name: str 
     star_model_name: str
     unet_model_name: str
+    unet_membrane_model_name: str
     roi_model_name: str
     den_model_name: str 
     cellpose_model_name: str
