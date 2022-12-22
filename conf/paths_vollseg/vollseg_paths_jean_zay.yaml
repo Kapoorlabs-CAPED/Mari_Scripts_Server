@@ -4,7 +4,7 @@ star_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/StarDist3D/'
 unet_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/Unet3D/'
 roi_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/MASKUNET/'
 den_model_dir:  '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CARE/'
-cellpose_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221121_182849'
+cellpose_model_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221122_172412'
 npy_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/for_vollcellsegpose_train1/mask_segnpy/'
 npy_mask_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/for_vollcellsegpose_train1/mask_seg/'
 
