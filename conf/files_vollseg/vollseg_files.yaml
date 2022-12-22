@@ -1,4 +1,5 @@
 npz_filename: 'XenopusMembraneSeg'
+model_name: 'membrane_xenopus_mari'
 unet_model_name: 'Unet3D/unet_nuclei_xenopus_mari'
 star_model_name: 'StarDist3D/nuclei_xenopus_mari'
 unet_membrane_model_name: 'Unet3D/unet_membrane_xenopus_mari'
