@@ -1,7 +1,7 @@
 import os
 import glob
 from tifffile import imread, imwrite
-from vollseg import Augmentation2D
+from caped_ai_augmentations import AugmentYX
 from pathlib import Path
 import numpy as np
 from scipy.ndimage import gaussian_filter
