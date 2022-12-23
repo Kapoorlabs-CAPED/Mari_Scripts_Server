@@ -15,11 +15,11 @@ configstore.store(name = 'VollSegConfig', node = VollSegConfig)
 
 @hydra.main(config_path = 'conf', config_name = 'config_vollseg')
 def main( config : VollSegConfig):
-        image_dir =  Path(config.paths_vollseg.raw_dir)
-        label_dir = Path(config.paths_vollseg.binary_mask_dir)
+        image_dir =  Path(os.path.join(config.paths_vollseg.base_dir, config.paths_vollseg.raw_dir))
+        label_dir = Path(os.path.join(config.paths_vollseg.base_dir, config.paths_vollseg.binary_mask_dir))
 
-        aug_image_dir =  config.paths_vollseg.aug_raw_dir
-        aug_seg_image_dir = config.paths_vollseg.aug_binary_mask_dir
+        aug_image_dir =  os.path.join(config.paths_vollseg.base_dir, config.paths_vollseg.aug_raw_dir)
+        aug_seg_image_dir = os.path.join(config.paths_vollseg.base_dir, config.paths_vollseg.aug_binary_mask_dir)
         acceptable_formats = config.aug_params.pattern
 
         Path(aug_image_dir).mkdir(exist_ok=True)
