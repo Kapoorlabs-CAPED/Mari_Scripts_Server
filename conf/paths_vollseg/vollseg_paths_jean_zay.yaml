@@ -18,9 +18,17 @@ tracking_seg_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/seg/third_d
 base_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/for_vollcellsegpose_train1/' 
 #'/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Training/segmentation_training/'
 raw_dir: 'raw_membrane/'
+
 real_mask_dir: 'real_mask_membrane/'
 binary_mask_dir: 'binary_mask_membrane/'
 binary_erode_mask_dir: 'binary_erode_mask_membrane/'
+
+aug_raw_dir: 'aug_raw_membrane/'
+
+aug_real_mask_dir: 'aug_real_mask_membrane/'
+aug_binary_mask_dir: 'aug_binary_mask_membrane/'
+aug_binary_erode_mask_dir: 'aug_binary_erode_mask_membrane/'
+
 #For segmentation prediction
 predict_image_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/fourth_dataset/for_vollseg_cellpose_test/test_vollseg_cellpose/'
 save_dir: '/gpfsstore/rech/jsy/uzj81mi/Mari_Data_Oneat/raw/fourth_dataset/for_vollseg_cellpose_test/test_vollseg_cellpose/vollcellseg/'
