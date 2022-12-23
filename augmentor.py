@@ -115,3 +115,8 @@ def main( config : VollSegConfig):
                         if os.path.exists(save_name_seg) == False:    
                             imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
                         count = count + 1
+                        
+                        
+if __name__=='__main__':
+    
+    main()                           
