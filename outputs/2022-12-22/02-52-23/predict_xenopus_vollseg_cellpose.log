@@ -1,0 +1,29 @@
+[2022-12-22 02:52:25,435][cellpose.models][INFO] - >>>> loading model /gpfsstore/rech/jsy/uzj81mi/Mari_Models/CellPose/CP_20221121_182849
+[2022-12-22 02:52:25,435][cellpose.core][INFO] - >>>> using CPU
+[2022-12-22 02:52:25,730][cellpose.models][INFO] - >>>> model diam_mean =  30.000 (ROIs rescaled to this size during training)
+[2022-12-22 02:52:25,730][cellpose.models][INFO] - >>>> model diam_labels =  34.611 (mean diameter of training ROIs)
+[2022-12-22 02:52:25,901][cellpose.transforms][INFO] - multi-stack tiff read in as having 16 planes 1 channels
+[2022-12-22 02:52:26,170][cellpose.models][INFO] - 0%|          | 0/16 [00:00<?, ?it/s]
+[2022-12-22 02:52:31,513][cellpose.models][INFO] - 6%|6         | 1/16 [00:05<01:20,  5.34s/it]
+[2022-12-22 02:52:36,424][cellpose.models][INFO] - 12%|#2        | 2/16 [00:10<01:11,  5.09s/it]
+[2022-12-22 02:52:41,291][cellpose.models][INFO] - 19%|#8        | 3/16 [00:15<01:04,  4.99s/it]
+[2022-12-22 02:52:46,101][cellpose.models][INFO] - 25%|##5       | 4/16 [00:19<00:59,  4.92s/it]
+[2022-12-22 02:52:50,943][cellpose.models][INFO] - 31%|###1      | 5/16 [00:24<00:53,  4.89s/it]
+[2022-12-22 02:52:55,845][cellpose.models][INFO] - 38%|###7      | 6/16 [00:29<00:48,  4.89s/it]
+[2022-12-22 02:53:00,759][cellpose.models][INFO] - 44%|####3     | 7/16 [00:34<00:44,  4.90s/it]
+[2022-12-22 02:53:05,587][cellpose.models][INFO] - 50%|#####     | 8/16 [00:39<00:39,  4.88s/it]
+[2022-12-22 02:53:10,426][cellpose.models][INFO] - 56%|#####6    | 9/16 [00:44<00:34,  4.87s/it]
+[2022-12-22 02:53:15,377][cellpose.models][INFO] - 62%|######2   | 10/16 [00:49<00:29,  4.89s/it]
+[2022-12-22 02:53:20,222][cellpose.models][INFO] - 69%|######8   | 11/16 [00:54<00:24,  4.88s/it]
+[2022-12-22 02:53:25,178][cellpose.models][INFO] - 75%|#######5  | 12/16 [00:59<00:19,  4.90s/it]
+[2022-12-22 02:53:30,111][cellpose.models][INFO] - 81%|########1 | 13/16 [01:03<00:14,  4.91s/it]
+[2022-12-22 02:53:35,000][cellpose.models][INFO] - 88%|########7 | 14/16 [01:08<00:09,  4.90s/it]
+[2022-12-22 02:53:39,924][cellpose.models][INFO] - 94%|#########3| 15/16 [01:13<00:04,  4.91s/it]
+[2022-12-22 02:53:44,866][cellpose.models][INFO] - 100%|##########| 16/16 [01:18<00:00,  4.92s/it]
+[2022-12-22 02:53:44,867][cellpose.models][INFO] - 100%|##########| 16/16 [01:18<00:00,  4.92s/it]
+[2022-12-22 02:53:44,867][cellpose.models][INFO] - network run in 78.70s
+[2022-12-22 02:53:44,870][cellpose.dynamics][INFO] - No cell pixels found.
+[2022-12-22 02:53:44,997][cellpose.dynamics][WARNING] - WARNING: no mask pixels found
+[2022-12-22 02:53:44,997][cellpose.dynamics][INFO] - No cell pixels found.
+[2022-12-22 02:55:14,229][cellpose.models][INFO] - stitching 16 planes using stitch_threshold=0.500 to make 3D masks
+[2022-12-22 02:55:15,220][cellpose.models][INFO] - masks created in 90.35s
