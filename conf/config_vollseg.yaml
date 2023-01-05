@@ -26,8 +26,8 @@ params:
     min_size: 1
     min_size_mask: 10
     max_size: 1000000
-    n_tiles: [4,4,4]
-    axes: 'ZYX'
+    n_tiles: [1,1,1]
+    axes: 'TZYX'
     dounet: True
     seedpool: False 
     slice_merge: False
@@ -42,28 +42,10 @@ params:
     cellprob_threshold: 0.0
     cellpose_model: True
     custom_cellpose_model: False
-    gpu: False
+    gpu: True
     do_3D: False
      
-aug_params:
-       
-
-        gauss_filter_size: 0
-        #choices for augmentation below are 1 or 2 or None
-        flip_axis: 1
-        shift_axis: 1
-        zoom_axis: 1
-        #shift range can be between -1 and 1 (-1 and 1 will translate the pixels completely out), zoom range > 0
-        shift_range: 0.2 
-        zoom_range: 2
-        rotate_axis: 1
-        rotation_angles: [20, 40, 60, 90, 120, 160] 
-        pattern : [".tif", ".TIFF", ".TIF", ".png"] 
-        sigma : 10
-        mean : 0
-        alpha_affine : 1.8
-        alpha : 3
-        distribution : 'Both'
+    
 
 defaults:
    - files_vollseg: vollseg_files
