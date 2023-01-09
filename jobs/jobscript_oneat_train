@@ -1,17 +1,13 @@
 #!/bin/bash
 #SBATCH --nodes=1             # Number of nodes 
 #SBATCH -A lzc@v100
-##SBATCH --gres=gpu:1         # Allocate 4 GPUs per node
-##SBATCH -C v100-32g
-##SBATCH --partition=gpu_p4
-#SBATCH --partition=prepost
-#SBATCH --job-name=VollSeg                # Jobname 
+#SBATCH --gres=gpu:1         # Allocate 4 GPUs per node
+#SBATCH -C v100-32g
+#SBATCH --job-name=oneat                # Jobname 
 #SBATCH --cpus-per-task=40
-#SBATCH --output=voll.o%j            # Output file 
-#SBATCH --error=voll.o%j            # Error file 
+#SBATCH --output=oneat.o%j            # Output file 
+#SBATCH --error=oneat.o%j            # Error file 
 #SBATCH --time=20:00:00       # Expected runtime HH:MM:SS (max 100h)
-#SBATCH --mail-user=randomaccessiblekapoor@gmail.com
-#SBATCH --mail-type=all
 module purge # purging modules inherited by default
 
 module load anaconda-py3/2020.11
@@ -22,4 +18,4 @@ set -x # activating echo of
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/linkhome/rech/gengoq01/uzj81mi/.conda/envs/naparienv/lib/
 echo $LD_LIBRARY_PATH
 
-python  /gpfswork/rech/jsy/uzj81mi/Mari_Scripts_Server/predict_xenopus_vollseg_cellpose.py
+python  /gpfswork/rech/jsy/uzj81mi/Mari_Scripts_Server/train_xenopus_oneat.py
