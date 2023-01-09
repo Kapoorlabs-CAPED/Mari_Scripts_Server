@@ -50,12 +50,12 @@ def main( config : VollSegConfig):
                     name = os.path.basename(os.path.splitext(fname)[0])
                     LabelName = os.path.basename(os.path.splitext(secondfname)[0])
                     if name == LabelName:
-                        image = imread(fname)
+                        image = imread(os.path.join(image_dir,fname))
                     
-                        labelimage = imread(secondfname)
+                        labelimage = imread(os.path.join(label_dir,secondfname))
                         for rotate_angle in rotation_angles:
                                         
-                                        rotate_pixels = Augmentation2D(rotate_angle = rotate_angle)
+                                        rotate_pixels = AugmentYX(rotate_angle = rotate_angle)
 
                                         aug_rotate_pixels,aug_rotate_pixels_label  = rotate_pixels.build(image = np.copy(image), labelimage = labelimage)
                                         
@@ -68,7 +68,7 @@ def main( config : VollSegConfig):
                                             imwrite(save_name_seg, aug_rotate_pixels_label.astype('uint16'))
                                         count = count + 1   
 
-                        addnoise_pixels = Augmentation2D(mean = mean, sigma = sigma, distribution = distribution)
+                        addnoise_pixels = AugmentYX(mean = mean, sigma = sigma, distribution = distribution)
 
                         aug_addnoise_pixels,aug_addnoise_pixels_label  = addnoise_pixels.build(image = np.copy(image), labelimage = labelimage)
                         
@@ -80,7 +80,7 @@ def main( config : VollSegConfig):
                             imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
                         count = count + 1                
         
-                        adddeform_pixels = Augmentation2D(alpha_affine = alpha_affine, alpha = alpha, sigma = sigma)
+                        adddeform_pixels = AugmentYX(alpha_affine = alpha_affine, alpha = alpha, sigma = sigma)
 
                         aug_adddeform_pixels,aug_adddeform_pixels_label  = adddeform_pixels.build(image = np.copy(image), labelimage = labelimage)
                         
@@ -92,29 +92,7 @@ def main( config : VollSegConfig):
                             imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
                         count = count + 1  
 
-                        flip_pixels = Augmentation2D(vertical_flip = True)
-
-                        aug_flip_pixels,aug_flip_pixels_label  = flip_pixels.build(image = np.copy(image), labelimage = labelimage)
-                        
-                        save_name_raw = aug_image_dir + '/' + 'vflip_'  + name + '.tif'
-                        save_name_seg = aug_seg_image_dir + '/' + 'vflip_'  + name + '.tif'
-                        if os.path.exists(save_name_raw) == False:
-                            imwrite(save_name_raw, aug_addnoise_pixels.astype('float32'))
-                        if os.path.exists(save_name_seg) == False:    
-                            imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
-                        count = count + 1
-
-                        flip_pixels = Augmentation2D(horizontal_flip = True)
-
-                        aug_flip_pixels,aug_flip_pixels_label  = flip_pixels.build(image = np.copy(image), labelimage = labelimage)
-                        
-                        save_name_raw = aug_image_dir + '/' + 'hflip_'  + name + '.tif'
-                        save_name_seg = aug_seg_image_dir + '/' + 'hflip_'  + name + '.tif'
-                        if os.path.exists(save_name_raw) == False:
-                            imwrite(save_name_raw, aug_addnoise_pixels.astype('float32'))
-                        if os.path.exists(save_name_seg) == False:    
-                            imwrite(save_name_seg, aug_addnoise_pixels_label.astype('uint16'))
-                        count = count + 1
+                       
                         
                         
 if __name__=='__main__':

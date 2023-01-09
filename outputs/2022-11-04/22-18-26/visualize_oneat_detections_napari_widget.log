@@ -1,8 +1,0 @@
-[2022-11-04 22:18:27,089][vispy][WARNING] - XKeyboard extension not present on the X server
-[2022-11-04 22:18:28,578][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 193, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
-[2022-11-04 22:18:28,579][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 194, resource id: 113246213, major code: 55 (CreateGC), minor code: 0
-[2022-11-04 22:18:28,579][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 195, resource id: 113246213, major code: 55 (CreateGC), minor code: 0
-[2022-11-04 22:18:33,638][vispy][WARNING] - QXcbConnection: XCB error: 2 (BadValue), sequence: 485, resource id: 32, major code: 53 (CreatePixmap), minor code: 0
-[2022-11-04 22:18:33,639][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 486, resource id: 113246245, major code: 55 (CreateGC), minor code: 0
-[2022-11-04 22:18:33,639][vispy][WARNING] - QXcbConnection: XCB error: 9 (BadDrawable), sequence: 487, resource id: 113246245, major code: 55 (CreateGC), minor code: 0
-[2022-11-04 22:18:52,996][OpenGL.acceleratesupport][INFO] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
